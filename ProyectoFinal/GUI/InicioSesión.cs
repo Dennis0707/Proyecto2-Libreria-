@@ -21,7 +21,7 @@ namespace GUI
 
         private void InicioSesión_Load(object sender, EventArgs e)
         {
-
+            panel1.BackColor = Color.FromArgb(100,0,0,0);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
