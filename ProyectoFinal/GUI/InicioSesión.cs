@@ -15,6 +15,28 @@ namespace GUI
         public InicioSesión()
         {
             InitializeComponent();
+
+           
+        }
+
+        private void InicioSesión_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lineShape1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
