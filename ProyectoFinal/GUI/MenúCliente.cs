@@ -16,5 +16,10 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void MenúCliente_Load(object sender, EventArgs e)
+        {
+            panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
+        }
     }
 }
