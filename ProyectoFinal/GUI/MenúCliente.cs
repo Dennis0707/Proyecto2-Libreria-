@@ -21,5 +21,15 @@ namespace GUI
         {
             panel1.BackColor = Color.FromArgb(100, 0, 0, 0);
         }
+
+        private void btnLibros_Click(object sender, EventArgs e)
+        {
+            panel3_Paint(new Cliente());
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

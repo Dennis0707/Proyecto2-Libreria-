@@ -34,6 +34,7 @@
             this.btnAccesorios = new System.Windows.Forms.Button();
             this.btnLibros = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -66,7 +67,7 @@
             this.btnAccesorios.FlatAppearance.BorderSize = 0;
             this.btnAccesorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccesorios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccesorios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(135)))), ((int)(((byte)(73)))));
+            this.btnAccesorios.ForeColor = System.Drawing.Color.Maroon;
             this.btnAccesorios.Location = new System.Drawing.Point(1, 110);
             this.btnAccesorios.Name = "btnAccesorios";
             this.btnAccesorios.Size = new System.Drawing.Size(162, 68);
@@ -80,13 +81,14 @@
             this.btnLibros.FlatAppearance.BorderSize = 0;
             this.btnLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLibros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLibros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(135)))), ((int)(((byte)(73)))));
+            this.btnLibros.ForeColor = System.Drawing.Color.Maroon;
             this.btnLibros.Location = new System.Drawing.Point(1, 36);
             this.btnLibros.Name = "btnLibros";
             this.btnLibros.Size = new System.Drawing.Size(162, 68);
             this.btnLibros.TabIndex = 2;
             this.btnLibros.Text = "Libros";
             this.btnLibros.UseVisualStyleBackColor = false;
+            this.btnLibros.Click += new System.EventHandler(this.btnLibros_Click);
             // 
             // pictureBox2
             // 
@@ -100,6 +102,14 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(314, 130);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 100);
+            this.panel3.TabIndex = 4;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
             // MenúCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +117,7 @@
             this.BackColor = System.Drawing.Color.BurlyWood;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -128,5 +139,6 @@
         private System.Windows.Forms.Button btnAccesorios;
         private System.Windows.Forms.Button btnLibros;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

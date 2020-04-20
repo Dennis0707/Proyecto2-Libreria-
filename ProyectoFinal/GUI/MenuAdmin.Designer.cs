@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnUsuarios = new System.Windows.Forms.Button();
@@ -45,7 +46,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Chocolate;
+            this.panel1.BackColor = System.Drawing.Color.Sienna;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -53,6 +55,18 @@
             this.panel1.Size = new System.Drawing.Size(800, 33);
             this.panel1.TabIndex = 4;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(14, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(167, 22);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Biblioteca Project";
             // 
             // panel3
             // 
@@ -81,7 +95,7 @@
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsuarios.ForeColor = System.Drawing.Color.Maroon;
-            this.btnUsuarios.Location = new System.Drawing.Point(3, 183);
+            this.btnUsuarios.Location = new System.Drawing.Point(2, 272);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(162, 68);
             this.btnUsuarios.TabIndex = 2;
@@ -96,7 +110,7 @@
             this.btnLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLibros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLibros.ForeColor = System.Drawing.Color.Maroon;
-            this.btnLibros.Location = new System.Drawing.Point(2, 36);
+            this.btnLibros.Location = new System.Drawing.Point(1, 125);
             this.btnLibros.Name = "btnLibros";
             this.btnLibros.Size = new System.Drawing.Size(162, 68);
             this.btnLibros.TabIndex = 2;
@@ -111,7 +125,7 @@
             this.btnAccesorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccesorios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccesorios.ForeColor = System.Drawing.Color.Maroon;
-            this.btnAccesorios.Location = new System.Drawing.Point(2, 110);
+            this.btnAccesorios.Location = new System.Drawing.Point(1, 199);
             this.btnAccesorios.Name = "btnAccesorios";
             this.btnAccesorios.Size = new System.Drawing.Size(162, 68);
             this.btnAccesorios.TabIndex = 3;
@@ -120,7 +134,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Chocolate;
+            this.panel2.BackColor = System.Drawing.Color.Sienna;
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.btnAccesorios);
             this.panel2.Controls.Add(this.btnLibros);
@@ -162,6 +176,7 @@
             this.Text = "MenuAdmin";
             this.Load += new System.EventHandler(this.MenuAdmin_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -178,5 +193,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label1;
     }
 }
