@@ -28,19 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenúCliente));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAccesorios = new System.Windows.Forms.Button();
             this.btnLibros = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Sienna;
-            this.panel1.Location = new System.Drawing.Point(158, 0);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(645, 33);
+            this.panel1.Size = new System.Drawing.Size(800, 33);
             this.panel1.TabIndex = 2;
             // 
             // panel2
@@ -48,9 +54,10 @@
             this.panel2.BackColor = System.Drawing.Color.Sienna;
             this.panel2.Controls.Add(this.btnAccesorios);
             this.panel2.Controls.Add(this.btnLibros);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 33);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(166, 452);
+            this.panel2.Size = new System.Drawing.Size(166, 417);
             this.panel2.TabIndex = 3;
             // 
             // btnAccesorios
@@ -81,6 +88,18 @@
             this.btnLibros.Text = "Libros";
             this.btnLibros.UseVisualStyleBackColor = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(773, 5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
             // MenúCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,7 +114,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenúCliente";
             this.Load += new System.EventHandler(this.MenúCliente_Load);
+            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -106,5 +127,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnAccesorios;
         private System.Windows.Forms.Button btnLibros;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

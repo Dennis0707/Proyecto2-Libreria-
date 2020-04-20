@@ -72,7 +72,7 @@
             this.btnInsertar.FlatAppearance.BorderSize = 0;
             this.btnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertar.Location = new System.Drawing.Point(162, 276);
+            this.btnInsertar.Location = new System.Drawing.Point(164, 274);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(101, 34);
             this.btnInsertar.TabIndex = 2;
@@ -94,6 +94,7 @@
             this.btnAtrás.Size = new System.Drawing.Size(51, 34);
             this.btnAtrás.TabIndex = 3;
             this.btnAtrás.UseVisualStyleBackColor = false;
+            this.btnAtrás.Click += new System.EventHandler(this.btnAtrás_Click);
             // 
             // textBox1
             // 
@@ -133,6 +134,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // textBox3
             // 

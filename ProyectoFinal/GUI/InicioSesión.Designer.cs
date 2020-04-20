@@ -137,6 +137,7 @@
             this.btnNuevo.TabIndex = 21;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnIngresar
             // 
@@ -155,6 +156,7 @@
             this.btnIngresar.TabIndex = 20;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = false;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // lblUsuario
             // 

@@ -38,5 +38,19 @@ namespace GUI
         {
 
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            MenuAdmin menad = new MenuAdmin();
+            menad.Show();
+            this.Visible = false;
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            Usuario uss = new Usuario();
+            uss.Show();
+            this.Visible = false;
+        }
     }
 }
