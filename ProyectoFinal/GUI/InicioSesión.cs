@@ -52,5 +52,10 @@ namespace GUI
             uss.Show();
             this.Visible = false;
         }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
