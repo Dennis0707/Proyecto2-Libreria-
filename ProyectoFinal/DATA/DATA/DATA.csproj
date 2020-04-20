@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Accesorio.cs" />
+    <Compile Include="Clientes.cs" />
     <Compile Include="Libreria.cs" />
     <Compile Include="Libro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
