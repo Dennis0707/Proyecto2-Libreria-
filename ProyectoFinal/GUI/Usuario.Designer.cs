@@ -37,8 +37,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lblRol = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +56,7 @@
             // 
             this.lblPass.AutoSize = true;
             this.lblPass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.Location = new System.Drawing.Point(92, 228);
+            this.lblPass.Location = new System.Drawing.Point(92, 160);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(103, 21);
             this.lblPass.TabIndex = 1;
@@ -72,7 +70,7 @@
             this.btnInsertar.FlatAppearance.BorderSize = 0;
             this.btnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertar.Location = new System.Drawing.Point(162, 276);
+            this.btnInsertar.Location = new System.Drawing.Point(164, 274);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(101, 34);
             this.btnInsertar.TabIndex = 2;
@@ -94,6 +92,7 @@
             this.btnAtrás.Size = new System.Drawing.Size(51, 34);
             this.btnAtrás.TabIndex = 3;
             this.btnAtrás.UseVisualStyleBackColor = false;
+            this.btnAtrás.Click += new System.EventHandler(this.btnAtrás_Click);
             // 
             // textBox1
             // 
@@ -106,7 +105,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(237, 228);
+            this.textBox2.Location = new System.Drawing.Point(237, 157);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(126, 27);
             this.textBox2.TabIndex = 5;
@@ -133,24 +132,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(237, 169);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(126, 27);
-            this.textBox3.TabIndex = 10;
-            // 
-            // lblRol
-            // 
-            this.lblRol.AutoSize = true;
-            this.lblRol.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRol.Location = new System.Drawing.Point(92, 172);
-            this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(33, 21);
-            this.lblRol.TabIndex = 9;
-            this.lblRol.Text = "Rol";
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Usuario
             // 
@@ -160,8 +142,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(444, 354);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.lblRol);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox2);
@@ -192,7 +172,5 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label lblRol;
     }
 }

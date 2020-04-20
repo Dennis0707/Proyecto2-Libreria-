@@ -36,5 +36,17 @@ namespace GUI
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnAtrás_Click(object sender, EventArgs e)
+        {
+            InicioSesión inis = new InicioSesión();
+            inis.Show();
+            this.Visible = false;
+        }
     }
 }
