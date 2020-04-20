@@ -112,6 +112,31 @@ namespace DATA
             Coneccion.Close();
 
         }
+
+        public DataSet ConsultarCliente(string cedula)
+        {
+            DataSet ds = new DataSet();
+
+            try
+            {
+                SqlConnection conn = new SqlConnection(connecion);
+
+
+                SqlDataAdapter consulta = new SqlDataAdapter("select * from Clientes where Cedula= '" + cedula + "'", conn);
+
+                consulta.Fill(ds);
+
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+
+            return ds;
+        }
         /*
      *  public DataSet ConsultarArticulos(string idProducto)
     {
