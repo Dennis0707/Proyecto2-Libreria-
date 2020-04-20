@@ -38,8 +38,10 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -57,6 +59,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.txtPass);
             this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.btnCancelar);
@@ -170,6 +173,14 @@
             this.lblUsuario.TabIndex = 18;
             this.lblUsuario.Text = "Usuario";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(123, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            // 
             // InicioSesión
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -189,6 +200,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,5 +215,6 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
