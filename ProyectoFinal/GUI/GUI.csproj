@@ -48,6 +48,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsultarAccesorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarAccesorio.Designer.cs">
+      <DependentUpon>ConsultarAccesorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarLibreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarLibreria.Designer.cs">
+      <DependentUpon>ConsultarLibreria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarLibro.Designer.cs">
+      <DependentUpon>ConsultarLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarUsuario.Designer.cs">
+      <DependentUpon>ConsultarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarAccesorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarAccesorio.Designer.cs">
+      <DependentUpon>EliminarAccesorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="EliminarLibreria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +200,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConsultarAccesorio.resx">
+      <DependentUpon>ConsultarAccesorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarLibreria.resx">
+      <DependentUpon>ConsultarLibreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarLibro.resx">
+      <DependentUpon>ConsultarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarUsuario.resx">
+      <DependentUpon>ConsultarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarAccesorio.resx">
+      <DependentUpon>EliminarAccesorio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EliminarLibreria.resx">
       <DependentUpon>EliminarLibreria.cs</DependentUpon>
     </EmbeddedResource>

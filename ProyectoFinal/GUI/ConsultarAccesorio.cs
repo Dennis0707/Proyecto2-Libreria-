@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class EliminarAccesorio : Form
+    public partial class ConsultarAccesorio : Form
     {
-        public EliminarAccesorio()
+        public ConsultarAccesorio()
         {
             InitializeComponent();
         }
@@ -22,26 +22,6 @@ namespace GUI
             MantenimientoAccesorios eas = new MantenimientoAccesorios();
             eas.Show();
             this.Visible = false;
-        }
-
-        private void dgvAccesorios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

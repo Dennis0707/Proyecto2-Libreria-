@@ -37,5 +37,12 @@ namespace GUI
             els.Show();
             this.Visible = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ConsultarLibro cls = new ConsultarLibro();
+            cls.Show();
+            this.Visible = false;
+        }
     }
 }

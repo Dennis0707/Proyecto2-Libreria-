@@ -37,5 +37,12 @@ namespace GUI
             eus.Show();
             this.Visible = false;
         }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            ConsultarUsuario cus = new ConsultarUsuario();
+            cus.Show();
+            this.Visible = false;
+        }
     }
 }

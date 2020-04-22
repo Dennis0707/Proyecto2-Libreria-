@@ -61,6 +61,7 @@
             this.dgvAccesorios.Name = "dgvAccesorios";
             this.dgvAccesorios.Size = new System.Drawing.Size(488, 131);
             this.dgvAccesorios.TabIndex = 45;
+            this.dgvAccesorios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccesorios_CellContentClick);
             // 
             // btnEliminar
             // 
@@ -75,6 +76,7 @@
             this.btnEliminar.TabIndex = 44;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // panel1
             // 
@@ -84,6 +86,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(516, 27);
             this.panel1.TabIndex = 43;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // groupBox1
             // 
@@ -98,6 +101,7 @@
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Eliminar Accesorio";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label2
             // 

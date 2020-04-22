@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class EliminarUsuario : Form
+    public partial class ConsultarUsuario : Form
     {
-        public EliminarUsuario()
+        public ConsultarUsuario()
         {
             InitializeComponent();
         }
