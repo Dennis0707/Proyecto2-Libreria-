@@ -58,34 +58,40 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(572, 27);
+            this.panel1.Size = new System.Drawing.Size(595, 27);
             this.panel1.TabIndex = 17;
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Maroon;
-            this.btnCancelar.Location = new System.Drawing.Point(454, 172);
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(454, 183);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(101, 62);
+            this.btnCancelar.Size = new System.Drawing.Size(125, 62);
             this.btnCancelar.TabIndex = 15;
-            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Text = "     Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnInsertar
             // 
+            this.btnInsertar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInsertar.FlatAppearance.BorderSize = 0;
             this.btnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsertar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertar.ForeColor = System.Drawing.Color.Maroon;
-            this.btnInsertar.Location = new System.Drawing.Point(454, 115);
+            this.btnInsertar.Image = ((System.Drawing.Image)(resources.GetObject("btnInsertar.Image")));
+            this.btnInsertar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInsertar.Location = new System.Drawing.Point(454, 97);
             this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(101, 62);
+            this.btnInsertar.Size = new System.Drawing.Size(125, 62);
             this.btnInsertar.TabIndex = 14;
-            this.btnInsertar.Text = "Insertar";
+            this.btnInsertar.Text = "        Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
             this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
@@ -242,6 +248,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(24, 54);
             this.pictureBox1.Name = "pictureBox1";
@@ -255,7 +262,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 386);
+            this.ClientSize = new System.Drawing.Size(595, 386);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancelar);

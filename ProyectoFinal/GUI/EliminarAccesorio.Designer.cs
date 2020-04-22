@@ -70,11 +70,13 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.Maroon;
-            this.btnEliminar.Location = new System.Drawing.Point(416, 73);
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(420, 73);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(92, 73);
+            this.btnEliminar.Size = new System.Drawing.Size(123, 73);
             this.btnEliminar.TabIndex = 44;
-            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Text = "           Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -84,7 +86,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(516, 27);
+            this.panel1.Size = new System.Drawing.Size(549, 27);
             this.panel1.TabIndex = 43;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -134,7 +136,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 344);
+            this.ClientSize = new System.Drawing.Size(549, 344);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvAccesorios);
             this.Controls.Add(this.btnEliminar);

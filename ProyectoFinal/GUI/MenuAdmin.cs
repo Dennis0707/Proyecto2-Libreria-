@@ -84,5 +84,17 @@ namespace GUI
         {
             panel5_Paint(new MantenimientoUsuarios());
         }
+
+        private void pictureBox2_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            InicioSesion iss = new InicioSesion();
+            iss.Show();
+            this.Visible = false;
+        }
     }
 }

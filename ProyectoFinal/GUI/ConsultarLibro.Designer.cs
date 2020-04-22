@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarLibro));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvLibro = new System.Windows.Forms.DataGridView();
-            this.btnConsultar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnConsultar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibro)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -59,22 +59,8 @@
             this.dgvLibro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLibro.Location = new System.Drawing.Point(16, 203);
             this.dgvLibro.Name = "dgvLibro";
-            this.dgvLibro.Size = new System.Drawing.Size(488, 131);
+            this.dgvLibro.Size = new System.Drawing.Size(540, 131);
             this.dgvLibro.TabIndex = 40;
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultar.FlatAppearance.BorderSize = 0;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.ForeColor = System.Drawing.Color.Maroon;
-            this.btnConsultar.Location = new System.Drawing.Point(413, 76);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(92, 73);
-            this.btnConsultar.TabIndex = 39;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -82,7 +68,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(524, 27);
+            this.panel1.Size = new System.Drawing.Size(568, 27);
             this.panel1.TabIndex = 38;
             // 
             // groupBox1
@@ -126,14 +112,30 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
             // 
+            // btnConsultar
+            // 
+            this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultar.FlatAppearance.BorderSize = 0;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.ForeColor = System.Drawing.Color.Maroon;
+            this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
+            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultar.Location = new System.Drawing.Point(411, 79);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(149, 73);
+            this.btnConsultar.TabIndex = 45;
+            this.btnConsultar.Text = "          Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            // 
             // ConsultarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 347);
+            this.ClientSize = new System.Drawing.Size(568, 347);
+            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvLibro);
-            this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -151,11 +153,11 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvLibro;
-        private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnConsultar;
     }
 }
