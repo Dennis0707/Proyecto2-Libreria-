@@ -26,5 +26,25 @@ namespace BUSINESS
 
             return datagrp;
         }
+
+        public bool EnviarInfoValidarRol(string usuario, string rol)
+        {
+            bool estado;
+            estado = clint.validarRol(usuario, rol);
+            return estado;
+        }
+
+        public void EnviarInfoLogin(string usua, string pass)
+        {
+            clint.validarIngreso(usua, pass);
+        }
+
+        /*public string EnviarAutoCmplt()
+        {
+            string ced;
+            ced=clint.Autocompletar();
+
+            return ced;
+        }*/
     }
 }

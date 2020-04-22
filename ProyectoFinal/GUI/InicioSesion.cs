@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUSINESS;
 
 namespace GUI
 {
     public partial class InicioSesion : Form
     {
+        NegClientes negClt = new NegClientes();
         public InicioSesion()
         {
             InitializeComponent();
@@ -26,9 +28,23 @@ namespace GUI
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            MenuAdmin menad = new MenuAdmin();
-            menad.Show();
-            this.Visible = false;
+            bool est;
+
+            est = negClt.EnviarInfoValidarRol(txtUsuario.Text,txtPass.Text);
+            if(est==true)
+            {
+                MenuAdmin menad = new MenuAdmin();
+                menad.Show();
+                this.Visible = false;
+            }
+            else if(est==false)
+            {
+                MenuCliente mencl = new MenuCliente();
+                mencl.Show();
+                this.Hide();
+            }
+
+
         }
 
         private void InicioSesion_Load(object sender, EventArgs e)

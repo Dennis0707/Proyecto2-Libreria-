@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
+
 namespace DATA
 {
     public class Clientes
@@ -103,7 +104,7 @@ namespace DATA
         public void Eliminar_Cliente(string cedula)
         {
             SqlConnection Coneccion = new SqlConnection(this.connecion);
-            string query = "DELETE from Clientes where Codigo_Producto = @Codigo_Producto";
+            string query = "DELETE from Clientes where Cedula = @Cedula";
 
             Coneccion.Open();
             SqlCommand comando = new SqlCommand(query, Coneccion);
@@ -137,33 +138,56 @@ namespace DATA
 
             return ds;
         }
-        /*
-     *  public DataSet ConsultarArticulos(string idProducto)
+
+        public string[] validarIngreso(string Usuario, string Pass)
+        {
+            string[] usuario = new string[3];
+
+            try
+            {
+                SqlConnection Conection = new SqlConnection(connecion);
+                SqlCommand Comando = new SqlCommand("select * from Usuarios where usuario = '" + Usuario + "' and pass ='" + Pass + "'", Conection);
+
+
+                Conection.Open();
+                SqlDataReader reader = Comando.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    usuario[1] = reader["Usuario"].ToString();
+                    usuario[0] = reader["pass"].ToString();
+                    usuario[2] = reader["rol"].ToString();
+                }
+
+                Conection.Close();
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+
+            return usuario;
+        }
+
+        public bool validarRol(string user, string rol)
+        {
+
+
+            if (rol.Equals("Admin"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+      /*  string cmplt;
+
+        public string Autocompletar()
     {
-        DataSet ds = new DataSet();
-
-        try
-        {
-            SqlConnection conn = new SqlConnection(connecion);
-
-
-            SqlDataAdapter consulta = new SqlDataAdapter("select * from Producto where Codigo_Producto= '" + idProducto + "'", conn);
-
-            consulta.Fill(ds);
-
-            conn.Close();
-
-        }
-        catch (Exception ex)
-        {
-            throw ex;
-        }
-
-
-        return ds;
-    }
-     public void Autocompletar(TextBox cmplt)
-    { 
+           
         string query = "select Codigo_Producto from Producto";
         SqlConnection Coneccion = new SqlConnection(this.connecion);
         SqlCommand comando = new SqlCommand(query, Coneccion);
@@ -173,12 +197,13 @@ namespace DATA
 
         while(dr.Read())
         {
-            cmplt.AutoCompleteCustomSource.Add(dr["Codigo_Producto"].ToString());
+            cmplt=(dr["Codigo_Producto"].ToString());
         }
         dr.Close();
         Coneccion.Close();
-    }
+        return cmplt;
+    }*/
 
-     */
+     
     }
 }
