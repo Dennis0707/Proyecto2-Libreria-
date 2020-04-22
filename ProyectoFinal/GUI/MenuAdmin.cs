@@ -34,10 +34,8 @@ namespace GUI
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            Cliente cli = new Cliente();
-            cli.Show();
-            this.Visible = false;
-            //panel5_Paint(new Cliente());
+            
+            //panel5_Paint(new MantenimientoUsuarios());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -45,14 +43,46 @@ namespace GUI
 
         }
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
+        private void panel5_Paint(object sender)
         {
-
+            if (this.panel5.Controls.Count > 0)
+                this.panel5.Controls.RemoveAt(0);
+            Form fact = sender as Form;
+            fact.TopLevel = false;
+            fact.Dock = DockStyle.Fill;
+            this.panel5.Controls.Add(fact);
+            this.panel5.Tag = fact;
+            fact.Show();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLibreria_Click(object sender, EventArgs e)
+        {
+            panel5_Paint(new MantenimientoLibreria());
+        }
+
+        private void btnLibros_Click_1(object sender, EventArgs e)
+        {
+            panel5_Paint(new MantenimientoLibros());
+        }
+
+        private void btnAccesorios_Click(object sender, EventArgs e)
+        {
+            panel5_Paint(new MantenimientoAccesorios());
+        }
+
+        private void btnUsuarios_Click_1(object sender, EventArgs e)
+        {
+            panel5_Paint(new MantenimientoUsuarios());
         }
     }
 }

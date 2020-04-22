@@ -60,6 +60,30 @@
     <Compile Include="InicioSesion.Designer.cs">
       <DependentUpon>InicioSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="MantenimientoAccesorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoAccesorios.Designer.cs">
+      <DependentUpon>MantenimientoAccesorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoLibreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoLibreria.Designer.cs">
+      <DependentUpon>MantenimientoLibreria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoLibros.Designer.cs">
+      <DependentUpon>MantenimientoLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios.Designer.cs">
+      <DependentUpon>MantenimientoUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +109,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoAccesorios.resx">
+      <DependentUpon>MantenimientoAccesorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoLibreria.resx">
+      <DependentUpon>MantenimientoLibreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoLibros.resx">
+      <DependentUpon>MantenimientoLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoUsuarios.resx">
+      <DependentUpon>MantenimientoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuAdmin.resx">
       <DependentUpon>MenuAdmin.cs</DependentUpon>

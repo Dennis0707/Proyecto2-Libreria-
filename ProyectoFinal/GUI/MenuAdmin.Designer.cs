@@ -29,44 +29,68 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuAdmin));
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnUsuarios = new System.Windows.Forms.Button();
-            this.btnLibros = new System.Windows.Forms.Button();
-            this.btnAccesorios = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLibreria = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnAccesorios = new System.Windows.Forms.Button();
+            this.btnLibros = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(258, 62);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(510, 361);
+            this.panel5.TabIndex = 9;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Sienna;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 33);
-            this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(748, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(14, 6);
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(12, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 22);
+            this.label1.Size = new System.Drawing.Size(228, 24);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Biblioteca Project";
+            this.label1.Text = "     Biblioteca Project  ";
             // 
             // panel3
             // 
@@ -86,55 +110,12 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
-            this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.ForeColor = System.Drawing.Color.Maroon;
-            this.btnUsuarios.Location = new System.Drawing.Point(2, 272);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(162, 68);
-            this.btnUsuarios.TabIndex = 2;
-            this.btnUsuarios.Text = "Usuarios";
-            this.btnUsuarios.UseVisualStyleBackColor = false;
-            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
-            // 
-            // btnLibros
-            // 
-            this.btnLibros.BackColor = System.Drawing.Color.Transparent;
-            this.btnLibros.FlatAppearance.BorderSize = 0;
-            this.btnLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLibros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLibros.ForeColor = System.Drawing.Color.Maroon;
-            this.btnLibros.Location = new System.Drawing.Point(1, 125);
-            this.btnLibros.Name = "btnLibros";
-            this.btnLibros.Size = new System.Drawing.Size(162, 68);
-            this.btnLibros.TabIndex = 2;
-            this.btnLibros.Text = "Libros";
-            this.btnLibros.UseVisualStyleBackColor = false;
-            this.btnLibros.Click += new System.EventHandler(this.btnLibros_Click);
-            // 
-            // btnAccesorios
-            // 
-            this.btnAccesorios.BackColor = System.Drawing.Color.Transparent;
-            this.btnAccesorios.FlatAppearance.BorderSize = 0;
-            this.btnAccesorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccesorios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccesorios.ForeColor = System.Drawing.Color.Maroon;
-            this.btnAccesorios.Location = new System.Drawing.Point(1, 199);
-            this.btnAccesorios.Name = "btnAccesorios";
-            this.btnAccesorios.Size = new System.Drawing.Size(162, 68);
-            this.btnAccesorios.TabIndex = 3;
-            this.btnAccesorios.Text = "Accesorios";
-            this.btnAccesorios.UseVisualStyleBackColor = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Sienna;
+            this.panel2.Controls.Add(this.btnLibreria);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.btnAccesorios);
             this.panel2.Controls.Add(this.btnLibros);
@@ -143,8 +124,22 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(166, 450);
-            this.panel2.TabIndex = 5;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.TabIndex = 8;
+            // 
+            // btnLibreria
+            // 
+            this.btnLibreria.BackColor = System.Drawing.Color.Transparent;
+            this.btnLibreria.FlatAppearance.BorderSize = 0;
+            this.btnLibreria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLibreria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLibreria.ForeColor = System.Drawing.Color.Maroon;
+            this.btnLibreria.Location = new System.Drawing.Point(0, 62);
+            this.btnLibreria.Name = "btnLibreria";
+            this.btnLibreria.Size = new System.Drawing.Size(166, 68);
+            this.btnLibreria.TabIndex = 5;
+            this.btnLibreria.Text = "Libreria";
+            this.btnLibreria.UseVisualStyleBackColor = false;
+            this.btnLibreria.Click += new System.EventHandler(this.btnLibreria_Click);
             // 
             // panel4
             // 
@@ -153,13 +148,50 @@
             this.panel4.Size = new System.Drawing.Size(631, 415);
             this.panel4.TabIndex = 4;
             // 
-            // panel5
+            // btnAccesorios
             // 
-            this.panel5.Location = new System.Drawing.Point(343, 60);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 100);
-            this.panel5.TabIndex = 6;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            this.btnAccesorios.BackColor = System.Drawing.Color.Transparent;
+            this.btnAccesorios.FlatAppearance.BorderSize = 0;
+            this.btnAccesorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAccesorios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAccesorios.ForeColor = System.Drawing.Color.Maroon;
+            this.btnAccesorios.Location = new System.Drawing.Point(2, 210);
+            this.btnAccesorios.Name = "btnAccesorios";
+            this.btnAccesorios.Size = new System.Drawing.Size(162, 68);
+            this.btnAccesorios.TabIndex = 3;
+            this.btnAccesorios.Text = "Accesorios";
+            this.btnAccesorios.UseVisualStyleBackColor = false;
+            this.btnAccesorios.Click += new System.EventHandler(this.btnAccesorios_Click);
+            // 
+            // btnLibros
+            // 
+            this.btnLibros.BackColor = System.Drawing.Color.Transparent;
+            this.btnLibros.FlatAppearance.BorderSize = 0;
+            this.btnLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLibros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLibros.ForeColor = System.Drawing.Color.Maroon;
+            this.btnLibros.Location = new System.Drawing.Point(3, 136);
+            this.btnLibros.Name = "btnLibros";
+            this.btnLibros.Size = new System.Drawing.Size(162, 68);
+            this.btnLibros.TabIndex = 2;
+            this.btnLibros.Text = "Libros";
+            this.btnLibros.UseVisualStyleBackColor = false;
+            this.btnLibros.Click += new System.EventHandler(this.btnLibros_Click_1);
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.Maroon;
+            this.btnUsuarios.Location = new System.Drawing.Point(2, 284);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(162, 68);
+            this.btnUsuarios.TabIndex = 2;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click_1);
             // 
             // MenuAdmin
             // 
@@ -177,6 +209,7 @@
             this.Load += new System.EventHandler(this.MenuAdmin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -184,15 +217,18 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnUsuarios;
-        private System.Windows.Forms.Button btnLibros;
-        private System.Windows.Forms.Button btnAccesorios;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
+
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnLibreria;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnAccesorios;
+        private System.Windows.Forms.Button btnLibros;
+        private System.Windows.Forms.Button btnUsuarios;
     }
 }
