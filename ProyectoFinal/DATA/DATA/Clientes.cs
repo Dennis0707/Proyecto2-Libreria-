@@ -170,7 +170,7 @@ namespace DATA
             return usuario;
         }
 
-        public bool validarRol(string user, string rol)
+        public bool validarRol( string rol)
         {
 
 
@@ -178,7 +178,7 @@ namespace DATA
             {
                 return true;
             }
-            else
+            else 
             {
                 return false;
             }

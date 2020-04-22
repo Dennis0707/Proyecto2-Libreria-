@@ -28,9 +28,14 @@ namespace GUI
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            string[] usuario = new string[3];
+            string user, rol;
             bool est;
 
-            est = negClt.EnviarInfoValidarRol(txtUsuario.Text,txtPass.Text);
+            usuario = negClt.EnviarInfoLogin(txtUsuario.Text, txtPass.Text);
+            user = usuario[1].ToString();
+            rol = usuario[2].ToString();
+            est = negClt.EnviarInfoValidarRol(rol);
             if(est==true)
             {
                 MenuAdmin menad = new MenuAdmin();

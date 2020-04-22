@@ -87,6 +87,7 @@
             this.btnInsertar.TabIndex = 14;
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // groupBox1
             // 
