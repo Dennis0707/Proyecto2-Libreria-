@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FacturaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturaCliente.Designer.cs">
+      <DependentUpon>FacturaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,11 +66,11 @@
     <Compile Include="MenuAdmin.Designer.cs">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenúCliente.cs">
+    <Compile Include="MenuCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenúCliente.Designer.cs">
-      <DependentUpon>MenúCliente.cs</DependentUpon>
+    <Compile Include="MenuCliente.Designer.cs">
+      <DependentUpon>MenuCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="NuevoUsuario.cs">
       <SubType>Form</SubType>
@@ -74,14 +80,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FacturaCliente.resx">
+      <DependentUpon>FacturaCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuAdmin.resx">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenúCliente.resx">
-      <DependentUpon>MenúCliente.cs</DependentUpon>
+    <EmbeddedResource Include="MenuCliente.resx">
+      <DependentUpon>MenuCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>
