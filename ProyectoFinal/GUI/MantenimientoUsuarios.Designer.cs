@@ -70,6 +70,7 @@
             this.btnInsertar.TabIndex = 21;
             this.btnInsertar.Text = "Insertar";
             this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click);
             // 
             // btnConsultar
             // 

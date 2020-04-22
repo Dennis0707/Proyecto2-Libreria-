@@ -16,5 +16,12 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            InsertarUsuario ius = new InsertarUsuario();
+            ius.Show();
+            this.Visible = false;
+        }
     }
 }

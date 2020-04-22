@@ -27,5 +27,17 @@ namespace GUI
             iss.Show();
             this.Visible = false;
         }
+
+        private void NuevoUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            InicioSesion iss = new InicioSesion();
+            iss.Show();
+            this.Visible = false;
+        }
     }
 }

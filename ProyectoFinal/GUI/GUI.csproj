@@ -60,6 +60,12 @@
     <Compile Include="InicioSesion.Designer.cs">
       <DependentUpon>InicioSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="InsertarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertarUsuario.Designer.cs">
+      <DependentUpon>InsertarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenimientoAccesorios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertarUsuario.resx">
+      <DependentUpon>InsertarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoAccesorios.resx">
       <DependentUpon>MantenimientoAccesorios.cs</DependentUpon>
