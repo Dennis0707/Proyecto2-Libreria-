@@ -30,5 +30,12 @@ namespace GUI
             mols.Show();
             this.Visible = false;
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            EliminarLibro els = new EliminarLibro();
+            els.Show();
+            this.Visible = false;
+        }
     }
 }

@@ -30,5 +30,12 @@ namespace GUI
             mls.Show();
             this.Visible = false;
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarLibreria els = new EliminarLibreria();
+            els.Show();
+            this.Visible = false;
+        }
     }
 }

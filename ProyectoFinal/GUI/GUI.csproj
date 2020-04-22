@@ -48,6 +48,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EliminarLibreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarLibreria.Designer.cs">
+      <DependentUpon>EliminarLibreria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarLibro.Designer.cs">
+      <DependentUpon>EliminarLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarUsuario.Designer.cs">
+      <DependentUpon>EliminarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FacturaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +170,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EliminarLibreria.resx">
+      <DependentUpon>EliminarLibreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarLibro.resx">
+      <DependentUpon>EliminarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarUsuario.resx">
+      <DependentUpon>EliminarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FacturaCliente.resx">
       <DependentUpon>FacturaCliente.cs</DependentUpon>
     </EmbeddedResource>

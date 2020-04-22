@@ -30,5 +30,12 @@ namespace GUI
             mas.Show();
             this.Visible = false;
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarAccesorio eas = new EliminarAccesorio();
+            eas.Show();
+            this.Visible = false;
+        }
     }
 }

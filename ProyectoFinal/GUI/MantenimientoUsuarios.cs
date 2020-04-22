@@ -30,5 +30,12 @@ namespace GUI
             mus.Show();
             this.Visible = false;
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarUsuario eus = new EliminarUsuario();
+            eus.Show();
+            this.Visible = false;
+        }
     }
 }
