@@ -17,7 +17,7 @@ namespace GUI
         public NuevoUsuario()
         {
             InitializeComponent();
-            neg.EnviarAutoCmplt(TextBox aut);
+            //neg.EnviarAutoCmplt(TextBox aut);
 
         }
 
@@ -38,6 +38,11 @@ namespace GUI
             InicioSesion iss = new InicioSesion();
             iss.Show();
             this.Visible = false;
+        }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
