@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class MantenimientoAccesorios : Form
+    public partial class InsertarLibreria : Form
     {
-        public MantenimientoAccesorios()
+        public InsertarLibreria()
         {
             InitializeComponent();
         }
 
-        private void btnInsertar_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            InsertarAccesorios ias = new InsertarAccesorios();
-            ias.Show();
+            MantenimientoLibreria als = new MantenimientoLibreria();
+            als.Show();
             this.Visible = false;
         }
     }

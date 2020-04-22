@@ -10,18 +10,23 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class MantenimientoAccesorios : Form
+    public partial class InsertarLibro : Form
     {
-        public MantenimientoAccesorios()
+        public InsertarLibro()
         {
             InitializeComponent();
         }
 
-        private void btnInsertar_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            InsertarAccesorios ias = new InsertarAccesorios();
-            ias.Show();
+            MantenimientoLibros alis = new MantenimientoLibros();
+            alis.Show();
             this.Visible = false;
+        }
+
+        private void txtConstraseña_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

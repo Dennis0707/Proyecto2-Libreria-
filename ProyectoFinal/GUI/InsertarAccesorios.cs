@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class MantenimientoAccesorios : Form
+    public partial class InsertarAccesorios : Form
     {
-        public MantenimientoAccesorios()
+        public InsertarAccesorios()
         {
             InitializeComponent();
         }
 
-        private void btnInsertar_Click(object sender, EventArgs e)
+        private void InsertarAccesorios_Load(object sender, EventArgs e)
         {
-            InsertarAccesorios ias = new InsertarAccesorios();
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MantenimientoAccesorios ias = new MantenimientoAccesorios();
             ias.Show();
             this.Visible = false;
         }

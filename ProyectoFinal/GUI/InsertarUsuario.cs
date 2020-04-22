@@ -33,5 +33,25 @@ namespace GUI
             uss.Show();
             this.Visible = false;
         }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InsertarUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

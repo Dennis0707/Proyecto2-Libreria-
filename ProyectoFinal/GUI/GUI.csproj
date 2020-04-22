@@ -60,6 +60,24 @@
     <Compile Include="InicioSesion.Designer.cs">
       <DependentUpon>InicioSesion.cs</DependentUpon>
     </Compile>
+    <Compile Include="InsertarAccesorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertarAccesorios.Designer.cs">
+      <DependentUpon>InsertarAccesorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertarLibreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertarLibreria.Designer.cs">
+      <DependentUpon>InsertarLibreria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertarLibro.Designer.cs">
+      <DependentUpon>InsertarLibro.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsertarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +133,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertarAccesorios.resx">
+      <DependentUpon>InsertarAccesorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertarLibreria.resx">
+      <DependentUpon>InsertarLibreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertarLibro.resx">
+      <DependentUpon>InsertarLibro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InsertarUsuario.resx">
       <DependentUpon>InsertarUsuario.cs</DependentUpon>
