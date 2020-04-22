@@ -19,8 +19,8 @@ namespace GUI
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            NuevoUsuario uss = new NuevoUsuario();
-            uss.Show();
+            NuevoUsuario iss = new NuevoUsuario();
+            iss.Show();
             this.Visible = false;
         }
 

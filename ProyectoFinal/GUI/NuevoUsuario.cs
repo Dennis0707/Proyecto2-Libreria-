@@ -10,26 +10,18 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class Cliente : Form
+    public partial class NuevoUsuario : Form
     {
-        public Cliente()
+        public NuevoUsuario()
         {
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Cliente_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            InicioSesion iss = new InicioSesion();
+            iss.Show();
+            this.Visible = false;
         }
     }
 }
