@@ -23,5 +23,12 @@ namespace GUI
             ius.Show();
             this.Visible = false;
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            ModificarUsuario mus = new ModificarUsuario();
+            mus.Show();
+            this.Visible = false;
+        }
     }
 }

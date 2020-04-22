@@ -16,5 +16,19 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+            InsertarLibreria alis = new InsertarLibreria();
+            alis.Show();
+            this.Visible = false;
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            ModificarLibreria mls = new ModificarLibreria();
+            mls.Show();
+            this.Visible = false;
+        }
     }
 }

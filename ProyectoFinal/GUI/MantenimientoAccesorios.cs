@@ -23,5 +23,12 @@ namespace GUI
             ias.Show();
             this.Visible = false;
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            ModificarAccesorio mas = new ModificarAccesorio();
+            mas.Show();
+            this.Visible = false;
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class InsertarLibreria
+    partial class ModificarLibreria
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsertarLibreria));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarLibreria));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtLoc = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvLibreria = new System.Windows.Forms.DataGridView();
-            this.btnInsertar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -63,12 +63,12 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Maroon;
-            this.groupBox1.Location = new System.Drawing.Point(83, 44);
+            this.groupBox1.Location = new System.Drawing.Point(84, 44);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(328, 245);
-            this.groupBox1.TabIndex = 36;
+            this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Nueva Libreria";
+            this.groupBox1.Text = "Actualizar Libreria";
             // 
             // txtLoc
             // 
@@ -124,6 +124,7 @@
             // 
             // txtId
             // 
+            this.txtId.Enabled = false;
             this.txtId.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(134, 34);
             this.txtId.Name = "txtId";
@@ -164,35 +165,35 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 61);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(41, 36);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // dgvLibreria
             // 
             this.dgvLibreria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLibreria.Location = new System.Drawing.Point(23, 306);
+            this.dgvLibreria.Location = new System.Drawing.Point(24, 306);
             this.dgvLibreria.Name = "dgvLibreria";
             this.dgvLibreria.Size = new System.Drawing.Size(488, 131);
-            this.dgvLibreria.TabIndex = 34;
+            this.dgvLibreria.TabIndex = 39;
             // 
-            // btnInsertar
+            // btnModificar
             // 
-            this.btnInsertar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInsertar.FlatAppearance.BorderSize = 0;
-            this.btnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsertar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertar.ForeColor = System.Drawing.Color.Maroon;
-            this.btnInsertar.Location = new System.Drawing.Point(437, 138);
-            this.btnInsertar.Name = "btnInsertar";
-            this.btnInsertar.Size = new System.Drawing.Size(92, 73);
-            this.btnInsertar.TabIndex = 33;
-            this.btnInsertar.Text = "Insertar";
-            this.btnInsertar.UseVisualStyleBackColor = true;
+            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.Maroon;
+            this.btnModificar.Location = new System.Drawing.Point(438, 138);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(96, 73);
+            this.btnModificar.TabIndex = 38;
+            this.btnModificar.Text = "Actualizar";
+            this.btnModificar.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -200,22 +201,22 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(540, 27);
-            this.panel1.TabIndex = 32;
+            this.panel1.Size = new System.Drawing.Size(556, 27);
+            this.panel1.TabIndex = 37;
             // 
-            // InsertarLibreria
+            // ModificarLibreria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 450);
+            this.ClientSize = new System.Drawing.Size(556, 461);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvLibreria);
-            this.Controls.Add(this.btnInsertar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "InsertarLibreria";
-            this.Text = "Agregar Libreria";
+            this.Name = "ModificarLibreria";
+            this.Text = "Modificar Libreria";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -231,6 +232,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label lbUsuario;
+        private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.TextBox txtMail;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label3;
@@ -238,8 +240,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvLibreria;
-        private System.Windows.Forms.Button btnInsertar;
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtTel;
     }
 }

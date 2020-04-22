@@ -16,5 +16,19 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            InsertarLibro ils = new InsertarLibro();
+            ils.Show();
+            this.Visible = false;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ModificarLibro mols = new ModificarLibro();
+            mols.Show();
+            this.Visible = false;
+        }
     }
 }
