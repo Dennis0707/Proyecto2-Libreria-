@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Archivo.cs" />
     <Compile Include="NegAccesorio.cs" />
     <Compile Include="NegClientes.cs" />
     <Compile Include="NegLibreria.cs" />

@@ -37,5 +37,10 @@ namespace GUI
         private void label5_Click(object sender, EventArgs e)
         {
                     }
+
+        private void btnFacturar_Click(object sender, EventArgs e)
+        {
+            BUSINESS.Archivo Archivo = new BUSINESS.Archivo();
+        }
     }
 }
