@@ -23,5 +23,15 @@ namespace GUI
             mls.Show();
             this.Visible = false;
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

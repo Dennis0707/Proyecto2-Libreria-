@@ -23,5 +23,10 @@ namespace GUI
             elbs.Show();
             this.Visible = false;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
