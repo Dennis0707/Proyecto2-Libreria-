@@ -48,6 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accesorio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Accesorio.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarAccesorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +289,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Accesorio.xsc">
+      <DependentUpon>Accesorio.xsd</DependentUpon>
+    </None>
+    <None Include="Accesorio.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Accesorio.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Accesorio.xss">
+      <DependentUpon>Accesorio.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
