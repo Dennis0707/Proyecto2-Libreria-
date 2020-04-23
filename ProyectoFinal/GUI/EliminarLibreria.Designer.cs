@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EliminarLibreria));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvLibreria = new System.Windows.Forms.DataGridView();
@@ -38,11 +39,21 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.libreria = new GUI.Libreria();
+            this.libreriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.libreriaTableAdapter = new GUI.LibreriaTableAdapters.LibreriaTableAdapter();
+            this.idLIbreriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.localizacionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibreria)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.libreria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libreriaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -59,10 +70,18 @@
             // 
             // dgvLibreria
             // 
+            this.dgvLibreria.AutoGenerateColumns = false;
             this.dgvLibreria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLibreria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idLIbreriaDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.localizacionDataGridViewTextBoxColumn,
+            this.telefonoDataGridViewTextBoxColumn,
+            this.mailDataGridViewTextBoxColumn});
+            this.dgvLibreria.DataSource = this.libreriaBindingSource;
             this.dgvLibreria.Location = new System.Drawing.Point(12, 202);
             this.dgvLibreria.Name = "dgvLibreria";
-            this.dgvLibreria.Size = new System.Drawing.Size(523, 131);
+            this.dgvLibreria.Size = new System.Drawing.Size(547, 131);
             this.dgvLibreria.TabIndex = 40;
             this.dgvLibreria.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibreria_CellContentClick);
             // 
@@ -73,7 +92,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(551, 27);
+            this.panel1.Size = new System.Drawing.Size(597, 27);
             this.panel1.TabIndex = 38;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -82,7 +101,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(528, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(565, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -141,7 +160,7 @@
             this.button1.ForeColor = System.Drawing.Color.Maroon;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(412, 79);
+            this.button1.Location = new System.Drawing.Point(436, 82);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 73);
             this.button1.TabIndex = 45;
@@ -149,11 +168,55 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // libreria
+            // 
+            this.libreria.DataSetName = "Libreria";
+            this.libreria.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // libreriaBindingSource
+            // 
+            this.libreriaBindingSource.DataMember = "Libreria";
+            this.libreriaBindingSource.DataSource = this.libreria;
+            // 
+            // libreriaTableAdapter
+            // 
+            this.libreriaTableAdapter.ClearBeforeFill = true;
+            // 
+            // idLIbreriaDataGridViewTextBoxColumn
+            // 
+            this.idLIbreriaDataGridViewTextBoxColumn.DataPropertyName = "Id_LIbreria";
+            this.idLIbreriaDataGridViewTextBoxColumn.HeaderText = "Id_LIbreria";
+            this.idLIbreriaDataGridViewTextBoxColumn.Name = "idLIbreriaDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // localizacionDataGridViewTextBoxColumn
+            // 
+            this.localizacionDataGridViewTextBoxColumn.DataPropertyName = "Localizacion";
+            this.localizacionDataGridViewTextBoxColumn.HeaderText = "Localizacion";
+            this.localizacionDataGridViewTextBoxColumn.Name = "localizacionDataGridViewTextBoxColumn";
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            // 
+            // mailDataGridViewTextBoxColumn
+            // 
+            this.mailDataGridViewTextBoxColumn.DataPropertyName = "Mail";
+            this.mailDataGridViewTextBoxColumn.HeaderText = "Mail";
+            this.mailDataGridViewTextBoxColumn.Name = "mailDataGridViewTextBoxColumn";
+            // 
             // EliminarLibreria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 348);
+            this.ClientSize = new System.Drawing.Size(597, 348);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvLibreria);
@@ -163,12 +226,15 @@
             this.Name = "EliminarLibreria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar Libreria";
+            this.Load += new System.EventHandler(this.EliminarLibreria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibreria)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.libreria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libreriaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,5 +250,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Libreria libreria;
+        private System.Windows.Forms.BindingSource libreriaBindingSource;
+        private LibreriaTableAdapters.LibreriaTableAdapter libreriaTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idLIbreriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn localizacionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mailDataGridViewTextBoxColumn;
     }
 }

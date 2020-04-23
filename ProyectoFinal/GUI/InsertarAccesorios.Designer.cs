@@ -106,7 +106,7 @@
             this.btnInsertar.ForeColor = System.Drawing.Color.Maroon;
             this.btnInsertar.Image = ((System.Drawing.Image)(resources.GetObject("btnInsertar.Image")));
             this.btnInsertar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInsertar.Location = new System.Drawing.Point(419, 122);
+            this.btnInsertar.Location = new System.Drawing.Point(509, 136);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(110, 73);
             this.btnInsertar.TabIndex = 28;

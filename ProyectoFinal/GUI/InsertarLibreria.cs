@@ -63,5 +63,12 @@ namespace GUI
             conexion.CerrarConexion();
 
         }
+
+        private void InsertarLibreria_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'libreria._Libreria' Puede moverla o quitarla según sea necesario.
+            this.libreriaTableAdapter.Fill(this.libreria._Libreria);
+
+        }
     }
 }
