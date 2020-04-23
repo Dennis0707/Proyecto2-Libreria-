@@ -33,5 +33,9 @@ namespace GUI
             back.Show();
             this.Visible = false;
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+                    }
     }
 }
