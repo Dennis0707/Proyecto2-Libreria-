@@ -45,6 +45,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbCantidad = new System.Windows.Forms.NumericUpDown();
             this.cbLibreria = new System.Windows.Forms.ComboBox();
+            this.libreriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.libreria = new GUI.Libreria();
             this.txtAutor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -57,10 +59,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.libroTableAdapter = new GUI.LibroTableAdapters.LibroTableAdapter();
-            this.libreria = new GUI.Libreria();
-            this.libreriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.libreriaTableAdapter = new GUI.LibreriaTableAdapters.LibreriaTableAdapter();
             this.libreriaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).BeginInit();
@@ -69,8 +70,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libreria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libreriaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libreria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libreriaBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -215,6 +216,16 @@
             this.cbLibreria.Size = new System.Drawing.Size(173, 24);
             this.cbLibreria.TabIndex = 14;
             // 
+            // libreriaBindingSource
+            // 
+            this.libreriaBindingSource.DataMember = "Libreria";
+            this.libreriaBindingSource.DataSource = this.libreria;
+            // 
+            // libreria
+            // 
+            this.libreria.DataSetName = "Libreria";
+            this.libreria.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txtAutor
             // 
             this.txtAutor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -329,16 +340,6 @@
             // 
             this.libroTableAdapter.ClearBeforeFill = true;
             // 
-            // libreria
-            // 
-            this.libreria.DataSetName = "Libreria";
-            this.libreria.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // libreriaBindingSource
-            // 
-            this.libreriaBindingSource.DataMember = "Libreria";
-            this.libreriaBindingSource.DataSource = this.libreria;
-            // 
             // libreriaTableAdapter
             // 
             this.libreriaTableAdapter.ClearBeforeFill = true;
@@ -348,11 +349,22 @@
             this.libreriaBindingSource1.DataMember = "Libreria";
             this.libreriaBindingSource1.DataSource = this.libreria;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.libreria;
+            this.comboBox1.DisplayMember = "Libreria.Id_LIbreria";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(522, 242);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 38;
+            // 
             // ModificarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 479);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvLibros);
@@ -372,8 +384,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libreria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libreriaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libreria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libreriaBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -412,5 +424,6 @@
         private System.Windows.Forms.BindingSource libreriaBindingSource;
         private LibreriaTableAdapters.LibreriaTableAdapter libreriaTableAdapter;
         private System.Windows.Forms.BindingSource libreriaBindingSource1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

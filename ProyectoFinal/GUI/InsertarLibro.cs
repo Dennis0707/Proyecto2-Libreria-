@@ -91,6 +91,8 @@ namespace GUI
 
         private void InsertarLibro_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'libreria._Libreria' Puede moverla o quitarla según sea necesario.
+            this.libreriaTableAdapter.Fill(this.libreria._Libreria);
             // TODO: esta línea de código carga datos en la tabla 'libro._Libro' Puede moverla o quitarla según sea necesario.
             this.libroTableAdapter.Fill(this.libro._Libro);
 
