@@ -44,5 +44,10 @@ namespace GUI
             cls.Show();
             this.Visible = false;
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

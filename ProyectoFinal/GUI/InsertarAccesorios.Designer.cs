@@ -32,6 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsertarAccesorios));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvAccesorios = new System.Windows.Forms.DataGridView();
+            this.idAccesorioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idLibreriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accesorioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.accesorio = new GUI.Accesorio();
             this.btnInsertar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -48,23 +56,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.accesorio = new GUI.Accesorio();
-            this.accesorioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.accesorioTableAdapter = new GUI.AccesorioTableAdapters.AccesorioTableAdapter();
-            this.idAccesorioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idLibreriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccesorios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accesorioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accesorio)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accesorio)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accesorioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -81,6 +81,7 @@
             // 
             // dgvAccesorios
             // 
+            this.dgvAccesorios.AllowUserToAddRows = false;
             this.dgvAccesorios.AutoGenerateColumns = false;
             this.dgvAccesorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAccesorios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -93,9 +94,55 @@
             this.dgvAccesorios.DataSource = this.accesorioBindingSource;
             this.dgvAccesorios.Location = new System.Drawing.Point(23, 338);
             this.dgvAccesorios.Name = "dgvAccesorios";
-            this.dgvAccesorios.Size = new System.Drawing.Size(653, 131);
+            this.dgvAccesorios.Size = new System.Drawing.Size(643, 131);
             this.dgvAccesorios.TabIndex = 29;
             this.dgvAccesorios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccesorios_CellContentClick);
+            // 
+            // idAccesorioDataGridViewTextBoxColumn
+            // 
+            this.idAccesorioDataGridViewTextBoxColumn.DataPropertyName = "Id_Accesorio";
+            this.idAccesorioDataGridViewTextBoxColumn.HeaderText = "Id_Accesorio";
+            this.idAccesorioDataGridViewTextBoxColumn.Name = "idAccesorioDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre ";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre ";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            // 
+            // idLibreriaDataGridViewTextBoxColumn
+            // 
+            this.idLibreriaDataGridViewTextBoxColumn.DataPropertyName = "Id_Libreria";
+            this.idLibreriaDataGridViewTextBoxColumn.HeaderText = "Id_Libreria";
+            this.idLibreriaDataGridViewTextBoxColumn.Name = "idLibreriaDataGridViewTextBoxColumn";
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            // 
+            // accesorioBindingSource
+            // 
+            this.accesorioBindingSource.DataMember = "Accesorio";
+            this.accesorioBindingSource.DataSource = this.accesorio;
+            // 
+            // accesorio
+            // 
+            this.accesorio.DataSetName = "Accesorio";
+            this.accesorio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnInsertar
             // 
@@ -106,7 +153,7 @@
             this.btnInsertar.ForeColor = System.Drawing.Color.Maroon;
             this.btnInsertar.Image = ((System.Drawing.Image)(resources.GetObject("btnInsertar.Image")));
             this.btnInsertar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInsertar.Location = new System.Drawing.Point(509, 136);
+            this.btnInsertar.Location = new System.Drawing.Point(556, 136);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(110, 73);
             this.btnInsertar.TabIndex = 28;
@@ -121,16 +168,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(727, 27);
+            this.panel1.Size = new System.Drawing.Size(688, 27);
             this.panel1.TabIndex = 27;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(509, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(665, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -154,7 +202,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Maroon;
-            this.groupBox1.Location = new System.Drawing.Point(85, 42);
+            this.groupBox1.Location = new System.Drawing.Point(175, 42);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(328, 278);
             this.groupBox1.TabIndex = 31;
@@ -269,61 +317,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Id Accesorio";
             // 
-            // accesorio
-            // 
-            this.accesorio.DataSetName = "Accesorio";
-            this.accesorio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // accesorioBindingSource
-            // 
-            this.accesorioBindingSource.DataMember = "Accesorio";
-            this.accesorioBindingSource.DataSource = this.accesorio;
-            // 
             // accesorioTableAdapter
             // 
             this.accesorioTableAdapter.ClearBeforeFill = true;
-            // 
-            // idAccesorioDataGridViewTextBoxColumn
-            // 
-            this.idAccesorioDataGridViewTextBoxColumn.DataPropertyName = "Id_Accesorio";
-            this.idAccesorioDataGridViewTextBoxColumn.HeaderText = "Id_Accesorio";
-            this.idAccesorioDataGridViewTextBoxColumn.Name = "idAccesorioDataGridViewTextBoxColumn";
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre ";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre ";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            // 
-            // idLibreriaDataGridViewTextBoxColumn
-            // 
-            this.idLibreriaDataGridViewTextBoxColumn.DataPropertyName = "Id_Libreria";
-            this.idLibreriaDataGridViewTextBoxColumn.HeaderText = "Id_Libreria";
-            this.idLibreriaDataGridViewTextBoxColumn.Name = "idLibreriaDataGridViewTextBoxColumn";
-            // 
-            // cantidadDataGridViewTextBoxColumn
-            // 
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             // 
             // InsertarAccesorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(727, 481);
+            this.ClientSize = new System.Drawing.Size(688, 481);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvAccesorios);
@@ -336,13 +338,13 @@
             this.Load += new System.EventHandler(this.InsertarAccesorios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccesorios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accesorioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accesorio)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accesorio)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accesorioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
