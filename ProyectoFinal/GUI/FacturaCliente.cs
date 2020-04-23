@@ -33,5 +33,10 @@ namespace GUI
             back.Show();
             this.Visible = false;
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
