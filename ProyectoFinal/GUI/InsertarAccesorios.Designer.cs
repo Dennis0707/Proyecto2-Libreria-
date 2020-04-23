@@ -35,7 +35,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.nudCantidad = new System.Windows.Forms.NumericUpDown();
+            this.cbCantidad = new System.Windows.Forms.NumericUpDown();
             this.cbLibreria = new System.Windows.Forms.ComboBox();
             this.txtDescrip = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -119,7 +119,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.nudCantidad);
+            this.groupBox1.Controls.Add(this.cbCantidad);
             this.groupBox1.Controls.Add(this.cbLibreria);
             this.groupBox1.Controls.Add(this.txtDescrip);
             this.groupBox1.Controls.Add(this.label7);
@@ -141,12 +141,12 @@
             this.groupBox1.Text = "Nuevo Accesorio";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // nudCantidad
+            // cbCantidad
             // 
-            this.nudCantidad.Location = new System.Drawing.Point(134, 200);
-            this.nudCantidad.Name = "nudCantidad";
-            this.nudCantidad.Size = new System.Drawing.Size(173, 23);
-            this.nudCantidad.TabIndex = 32;
+            this.cbCantidad.Location = new System.Drawing.Point(134, 200);
+            this.cbCantidad.Name = "cbCantidad";
+            this.cbCantidad.Size = new System.Drawing.Size(173, 23);
+            this.cbCantidad.TabIndex = 32;
             // 
             // cbLibreria
             // 
@@ -269,7 +269,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -291,7 +291,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown nudCantidad;
+        private System.Windows.Forms.NumericUpDown cbCantidad;
         private System.Windows.Forms.ComboBox cbLibreria;
         private System.Windows.Forms.PictureBox pictureBox2;
     }

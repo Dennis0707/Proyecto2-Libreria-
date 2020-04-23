@@ -20,7 +20,7 @@ namespace BUSINESS
         {
             libreria.ActualizarLibreria(Id_Libreria, Nombre, Localizacion, Telefono, Mail);
         }
-        public void eliminar(int Id_Libreria, string Nombre, string Localizacion, string Telefono, string Mail)
+        public void eliminar(int Id_Libreria)
         {
             libreria.EliminarLibreria(Id_Libreria);
         }

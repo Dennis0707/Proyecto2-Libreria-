@@ -19,7 +19,7 @@ namespace BUSINESS
         {
             libro.ActualizarLibro(Id_Libro, Nombre, Autor, Id_Libreria, Cantidad, Precio);
         }
-        public void Eliminar(int Id_Libro)
+        public void eliminar(int Id_Libro)
         {
             libro.EliminarLibro(Id_Libro);
         }

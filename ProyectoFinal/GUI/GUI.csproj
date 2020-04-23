@@ -302,6 +302,10 @@
       <Project>{7fda0591-a81f-4a20-87f8-661eda2950d1}</Project>
       <Name>BUSINESS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DATA\DATA\DATA.csproj">
+      <Project>{7c617e38-2121-4b9d-98d4-9159861d3f50}</Project>
+      <Name>DATA</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

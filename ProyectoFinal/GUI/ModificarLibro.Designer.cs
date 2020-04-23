@@ -32,27 +32,27 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvLibros = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.nudLibreria = new System.Windows.Forms.NumericUpDown();
+            this.cbCantidad = new System.Windows.Forms.NumericUpDown();
             this.cbLibreria = new System.Windows.Forms.ComboBox();
-            this.txtConstraseña = new System.Windows.Forms.TextBox();
+            this.txtAutor = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lbUsuario = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudLibreria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -85,15 +85,28 @@
             this.panel1.Size = new System.Drawing.Size(569, 27);
             this.panel1.TabIndex = 33;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(546, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 16;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.nudLibreria);
+            this.groupBox1.Controls.Add(this.cbCantidad);
             this.groupBox1.Controls.Add(this.cbLibreria);
-            this.groupBox1.Controls.Add(this.txtConstraseña);
+            this.groupBox1.Controls.Add(this.txtAutor);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.lbUsuario);
-            this.groupBox1.Controls.Add(this.txtTelefono);
+            this.groupBox1.Controls.Add(this.txtPrecio);
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -108,12 +121,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Actualizar Libro";
             // 
-            // nudLibreria
+            // cbCantidad
             // 
-            this.nudLibreria.Location = new System.Drawing.Point(121, 202);
-            this.nudLibreria.Name = "nudLibreria";
-            this.nudLibreria.Size = new System.Drawing.Size(173, 23);
-            this.nudLibreria.TabIndex = 15;
+            this.cbCantidad.Location = new System.Drawing.Point(121, 202);
+            this.cbCantidad.Name = "cbCantidad";
+            this.cbCantidad.Size = new System.Drawing.Size(173, 23);
+            this.cbCantidad.TabIndex = 15;
             // 
             // cbLibreria
             // 
@@ -123,13 +136,13 @@
             this.cbLibreria.Size = new System.Drawing.Size(173, 24);
             this.cbLibreria.TabIndex = 14;
             // 
-            // txtConstraseña
+            // txtAutor
             // 
-            this.txtConstraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConstraseña.Location = new System.Drawing.Point(121, 117);
-            this.txtConstraseña.Name = "txtConstraseña";
-            this.txtConstraseña.Size = new System.Drawing.Size(173, 27);
-            this.txtConstraseña.TabIndex = 13;
+            this.txtAutor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAutor.Location = new System.Drawing.Point(121, 117);
+            this.txtAutor.Name = "txtAutor";
+            this.txtAutor.Size = new System.Drawing.Size(173, 27);
+            this.txtAutor.TabIndex = 13;
             // 
             // label7
             // 
@@ -159,13 +172,13 @@
             this.lbUsuario.TabIndex = 10;
             this.lbUsuario.Text = "Nombre";
             // 
-            // txtTelefono
+            // txtPrecio
             // 
-            this.txtTelefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(121, 238);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(173, 27);
-            this.txtTelefono.TabIndex = 7;
+            this.txtPrecio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio.Location = new System.Drawing.Point(121, 238);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(173, 27);
+            this.txtPrecio.TabIndex = 7;
             // 
             // txtId
             // 
@@ -216,19 +229,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Id Libro";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(546, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // btnActualizar
             // 
             this.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -244,6 +244,7 @@
             this.btnActualizar.TabIndex = 37;
             this.btnActualizar.Text = "          Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // ModificarLibro
             // 
@@ -262,10 +263,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudLibreria)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,13 +277,13 @@
         private System.Windows.Forms.DataGridView dgvLibros;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown nudLibreria;
+        private System.Windows.Forms.NumericUpDown cbCantidad;
         private System.Windows.Forms.ComboBox cbLibreria;
-        private System.Windows.Forms.TextBox txtConstraseña;
+        private System.Windows.Forms.TextBox txtAutor;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lbUsuario;
-        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

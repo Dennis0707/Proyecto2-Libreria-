@@ -22,6 +22,7 @@ namespace GUI
             InsertarAccesorios ias = new InsertarAccesorios();
             ias.Show();
             this.Visible = false;
+            
         }
 
         private void btnModificar_Click(object sender, EventArgs e)

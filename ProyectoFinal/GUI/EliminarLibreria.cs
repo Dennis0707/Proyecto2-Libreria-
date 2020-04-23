@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,9 @@ namespace GUI
 {
     public partial class EliminarLibreria : Form
     {
+        System.Data.SqlClient.SqlDataAdapter adpt;
+        DataTable dt;
+        SqlCommand cmd;
         public EliminarLibreria()
         {
             InitializeComponent();
@@ -47,6 +51,33 @@ namespace GUI
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BUSINESS.NegLibreria libreria = new BUSINESS.NegLibreria();
+
+            if (string.IsNullOrEmpty(txtId.Text))
+            {
+                MessageBox.Show("Debe seleccionar una libreria");
+            }
+            else
+            {
+                libreria.eliminar(Convert.ToInt32(txtId.Text));
+                MessageBox.Show("La libreria fue eliminada con exito");
+                ActualizarTabla();
+            }
+            txtId.Text = "";
+        }
+        private void ActualizarTabla()
+        {
+            DATA.Libreria conexion = new DATA.Libreria();
+            adpt = new SqlDataAdapter("SELECT *  FROM [ProyectoFinal].[dbo].[Libreria]", conexion.AbrirConexion());
+            dt = new DataTable();
+            adpt.Fill(dt);
+            dgvLibreria.DataSource = dt;
+            conexion.CerrarConexion();
+
         }
     }
 }

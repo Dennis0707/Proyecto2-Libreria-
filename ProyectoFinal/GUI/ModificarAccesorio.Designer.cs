@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarAccesorio));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.nudCantidad = new System.Windows.Forms.NumericUpDown();
+            this.cbCantidad = new System.Windows.Forms.NumericUpDown();
             this.cbLibreria = new System.Windows.Forms.ComboBox();
             this.txtDescrip = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccesorios)).BeginInit();
             this.panel1.SuspendLayout();
@@ -57,7 +57,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.nudCantidad);
+            this.groupBox1.Controls.Add(this.cbCantidad);
             this.groupBox1.Controls.Add(this.cbLibreria);
             this.groupBox1.Controls.Add(this.txtDescrip);
             this.groupBox1.Controls.Add(this.label7);
@@ -78,12 +78,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Actualizar Accesorio";
             // 
-            // nudCantidad
+            // cbCantidad
             // 
-            this.nudCantidad.Location = new System.Drawing.Point(134, 200);
-            this.nudCantidad.Name = "nudCantidad";
-            this.nudCantidad.Size = new System.Drawing.Size(173, 23);
-            this.nudCantidad.TabIndex = 32;
+            this.cbCantidad.Location = new System.Drawing.Point(134, 200);
+            this.cbCantidad.Name = "cbCantidad";
+            this.cbCantidad.Size = new System.Drawing.Size(173, 23);
+            this.cbCantidad.TabIndex = 32;
             // 
             // cbLibreria
             // 
@@ -221,6 +221,7 @@
             this.btnActualizar.TabIndex = 33;
             this.btnActualizar.Text = "          Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // panel1
             // 
@@ -261,7 +262,7 @@
             this.Text = "Modificar Accesorio";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccesorios)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -273,7 +274,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown nudCantidad;
+        private System.Windows.Forms.NumericUpDown cbCantidad;
         private System.Windows.Forms.ComboBox cbLibreria;
         private System.Windows.Forms.TextBox txtDescrip;
         private System.Windows.Forms.Label label7;

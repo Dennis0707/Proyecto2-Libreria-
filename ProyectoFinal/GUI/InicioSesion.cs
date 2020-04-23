@@ -36,13 +36,13 @@ namespace GUI
             user = usuario[1].ToString();
             rol = usuario[2].ToString();
             est = negClt.EnviarInfoValidarRol(rol);
-            if(est==true)
+            if(est)
             {
                 MenuAdmin menad = new MenuAdmin();
                 menad.Show();
                 this.Visible = false;
             }
-            else if(est==false)
+            else 
             {
                 MenuCliente mencl = new MenuCliente();
                 mencl.Show();
@@ -64,6 +64,7 @@ namespace GUI
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            this.Close();
             Application.Exit();
         }
     }
