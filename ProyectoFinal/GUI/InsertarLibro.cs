@@ -56,7 +56,7 @@ namespace GUI
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void btnInsertar_Click_1(object sender, EventArgs e)

@@ -169,7 +169,7 @@
             this.Name = "InicioSesion";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InicioSesion";
+            this.Text = "Inicio Sesion";
             this.Load += new System.EventHandler(this.InicioSesion_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

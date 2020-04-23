@@ -43,7 +43,7 @@ namespace GUI
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }
