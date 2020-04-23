@@ -63,6 +63,7 @@
             this.libreriaTableAdapter = new GUI.LibreriaTableAdapters.LibreriaTableAdapter();
             this.cbLibreria = new System.Windows.Forms.ComboBox();
             this.libreriaBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.libreriaBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libreriaBindingSource1)).BeginInit();
@@ -76,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libreriaBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libreriaBindingSource3)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -358,7 +360,7 @@
             // 
             // cbLibreria
             // 
-            this.cbLibreria.DataSource = this.libreriaBindingSource2;
+            this.cbLibreria.DataSource = this.libreriaBindingSource3;
             this.cbLibreria.DisplayMember = "Id_LIbreria";
             this.cbLibreria.FormattingEnabled = true;
             this.cbLibreria.Location = new System.Drawing.Point(134, 162);
@@ -370,6 +372,11 @@
             // 
             this.libreriaBindingSource2.DataMember = "Libreria";
             this.libreriaBindingSource2.DataSource = this.libreria;
+            // 
+            // libreriaBindingSource3
+            // 
+            this.libreriaBindingSource3.DataMember = "Libreria";
+            this.libreriaBindingSource3.DataSource = this.libreria;
             // 
             // ModificarAccesorio
             // 
@@ -400,6 +407,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libreriaBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libreriaBindingSource3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -439,5 +447,6 @@
         private System.Windows.Forms.BindingSource libreriaBindingSource1;
         private System.Windows.Forms.ComboBox cbLibreria;
         private System.Windows.Forms.BindingSource libreriaBindingSource2;
+        private System.Windows.Forms.BindingSource libreriaBindingSource3;
     }
 }

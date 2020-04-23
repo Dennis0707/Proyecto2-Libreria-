@@ -10,9 +10,7 @@ namespace DATA
 {
    public class Accesorio
     {
-        private string conexion;
-        private bool funciono;
-        private bool funcionoRol;
+        
         SqlCommand comando = new SqlCommand();
         private SqlConnection Conex = new SqlConnection("Server=LAPTOP-3SNBQ5QJ\\SQLEXPRESS;DataBase= ProyectoFinal;Integrated Security=true");
         public Accesorio()

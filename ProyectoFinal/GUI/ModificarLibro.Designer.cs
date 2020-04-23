@@ -60,6 +60,7 @@
             this.libreria = new GUI.Libreria();
             this.libreriaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.libreriaTableAdapter = new GUI.LibreriaTableAdapters.LibreriaTableAdapter();
+            this.libreriaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).BeginInit();
@@ -70,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libreria)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libreriaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libreriaBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -194,6 +196,7 @@
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Actualizar Libro";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // cbCantidad
             // 
@@ -340,6 +343,11 @@
             // 
             this.libreriaTableAdapter.ClearBeforeFill = true;
             // 
+            // libreriaBindingSource1
+            // 
+            this.libreriaBindingSource1.DataMember = "Libreria";
+            this.libreriaBindingSource1.DataSource = this.libreria;
+            // 
             // ModificarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,6 +374,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libreria)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libreriaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libreriaBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -402,5 +411,6 @@
         private Libreria libreria;
         private System.Windows.Forms.BindingSource libreriaBindingSource;
         private LibreriaTableAdapters.LibreriaTableAdapter libreriaTableAdapter;
+        private System.Windows.Forms.BindingSource libreriaBindingSource1;
     }
 }

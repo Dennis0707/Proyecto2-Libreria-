@@ -71,5 +71,10 @@ namespace GUI
             this.libroTableAdapter.Fill(this.libro._Libro);
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
