@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DATA
 {
-    class Libro
+   public class Libro
     {
 
         private string conexion;

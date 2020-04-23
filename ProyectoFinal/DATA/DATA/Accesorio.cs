@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DATA
 {
-    class Accesorio
+   public class Accesorio
     {
         private string conexion;
         private bool funciono;

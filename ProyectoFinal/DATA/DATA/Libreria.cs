@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DATA
 {
-    class Libreria
+   public class Libreria
     {
         private string conexion;
         private bool funciono;

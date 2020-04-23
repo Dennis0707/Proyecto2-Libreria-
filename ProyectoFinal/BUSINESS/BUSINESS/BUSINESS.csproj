@@ -41,7 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NegAccesorio.cs" />
     <Compile Include="NegClientes.cs" />
+    <Compile Include="NegLibreria.cs" />
+    <Compile Include="NegLibro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
