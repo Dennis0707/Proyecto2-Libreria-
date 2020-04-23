@@ -7,18 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BUSINESS;
 
 namespace GUI
 {
-    public partial class NuevoUsuario : Form
+    public partial class MenuCliente : Form
     {
-        NegClientes neg = new NegClientes();
-        public NuevoUsuario()
+        public MenuCliente()
         {
             InitializeComponent();
-            //neg.EnviarAutoCmplt(TextBox aut);
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -28,21 +24,26 @@ namespace GUI
             this.Visible = false;
         }
 
-        private void NuevoUsuario_Load(object sender, EventArgs e)
+        private void btnAceptar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            InicioSesion iss = new InicioSesion();
-            iss.Show();
+            FacturaCliente fac = new FacturaCliente();
+            fac.Show();
             this.Visible = false;
         }
 
-        private void btnInsertar_Click(object sender, EventArgs e)
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

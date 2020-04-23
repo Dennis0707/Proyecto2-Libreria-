@@ -48,11 +48,113 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsultarAccesorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarAccesorio.Designer.cs">
+      <DependentUpon>ConsultarAccesorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarLibreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarLibreria.Designer.cs">
+      <DependentUpon>ConsultarLibreria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarLibro.Designer.cs">
+      <DependentUpon>ConsultarLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarUsuario.Designer.cs">
+      <DependentUpon>ConsultarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarAccesorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarAccesorio.Designer.cs">
+      <DependentUpon>EliminarAccesorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarLibreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarLibreria.Designer.cs">
+      <DependentUpon>EliminarLibreria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarLibro.Designer.cs">
+      <DependentUpon>EliminarLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarUsuario.Designer.cs">
+      <DependentUpon>EliminarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturaCliente.Designer.cs">
+      <DependentUpon>FacturaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InicioSesion.Designer.cs">
       <DependentUpon>InicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertarAccesorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertarAccesorios.Designer.cs">
+      <DependentUpon>InsertarAccesorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertarLibreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertarLibreria.Designer.cs">
+      <DependentUpon>InsertarLibreria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertarLibro.Designer.cs">
+      <DependentUpon>InsertarLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertarUsuario.Designer.cs">
+      <DependentUpon>InsertarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoAccesorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoAccesorios.Designer.cs">
+      <DependentUpon>MantenimientoAccesorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoLibreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoLibreria.Designer.cs">
+      <DependentUpon>MantenimientoLibreria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoLibros.Designer.cs">
+      <DependentUpon>MantenimientoLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenimientoUsuarios.Designer.cs">
+      <DependentUpon>MantenimientoUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuAdmin.cs">
       <SubType>Form</SubType>
@@ -60,11 +162,35 @@
     <Compile Include="MenuAdmin.Designer.cs">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenúCliente.cs">
+    <Compile Include="MenuCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenúCliente.Designer.cs">
-      <DependentUpon>MenúCliente.cs</DependentUpon>
+    <Compile Include="MenuCliente.Designer.cs">
+      <DependentUpon>MenuCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarAccesorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarAccesorio.Designer.cs">
+      <DependentUpon>ModificarAccesorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarLibreria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarLibreria.Designer.cs">
+      <DependentUpon>ModificarLibreria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarLibro.Designer.cs">
+      <DependentUpon>ModificarLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarUsuario.Designer.cs">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="NuevoUsuario.cs">
       <SubType>Form</SubType>
@@ -74,14 +200,77 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConsultarAccesorio.resx">
+      <DependentUpon>ConsultarAccesorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarLibreria.resx">
+      <DependentUpon>ConsultarLibreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarLibro.resx">
+      <DependentUpon>ConsultarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultarUsuario.resx">
+      <DependentUpon>ConsultarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarAccesorio.resx">
+      <DependentUpon>EliminarAccesorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarLibreria.resx">
+      <DependentUpon>EliminarLibreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarLibro.resx">
+      <DependentUpon>EliminarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarUsuario.resx">
+      <DependentUpon>EliminarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturaCliente.resx">
+      <DependentUpon>FacturaCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InicioSesion.resx">
       <DependentUpon>InicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertarAccesorios.resx">
+      <DependentUpon>InsertarAccesorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertarLibreria.resx">
+      <DependentUpon>InsertarLibreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertarLibro.resx">
+      <DependentUpon>InsertarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertarUsuario.resx">
+      <DependentUpon>InsertarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoAccesorios.resx">
+      <DependentUpon>MantenimientoAccesorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoLibreria.resx">
+      <DependentUpon>MantenimientoLibreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoLibros.resx">
+      <DependentUpon>MantenimientoLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoUsuarios.resx">
+      <DependentUpon>MantenimientoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuAdmin.resx">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenúCliente.resx">
-      <DependentUpon>MenúCliente.cs</DependentUpon>
+    <EmbeddedResource Include="MenuCliente.resx">
+      <DependentUpon>MenuCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarAccesorio.resx">
+      <DependentUpon>ModificarAccesorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarLibreria.resx">
+      <DependentUpon>ModificarLibreria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarLibro.resx">
+      <DependentUpon>ModificarLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarUsuario.resx">
+      <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoUsuario.resx">
       <DependentUpon>NuevoUsuario.cs</DependentUpon>

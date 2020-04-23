@@ -16,4 +16,11 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new InicioSesión());
+=======
+            Application.Run(new InicioSesion());
+        }
+    }
+}
+>>>>>>> d6702a577b8c25f8c8ec5a9dbfacc4c84fb22830
