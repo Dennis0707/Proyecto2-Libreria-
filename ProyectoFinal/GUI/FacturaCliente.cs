@@ -42,5 +42,10 @@ namespace GUI
         {
             BUSINESS.Archivo Archivo = new BUSINESS.Archivo();
         }
+
+        private void FacturaCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

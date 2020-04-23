@@ -9,7 +9,7 @@ namespace BUSINESS
 {
    public class Archivo
     {
-        string patch = @"C:\Users\denni\Desktop\ProyectoFinal\Proyecto2-Libreria-\ProyectoFinal\DATA\test.txt";
+        string patch = "C:\\Users\\denni\\Desktop\\ProyectoFinal\\Proyecto2-Libreria-\\ProyectoFinal\\DATA\\test.txt";
         public  Archivo()
     {
             // This text is added only once to the file.

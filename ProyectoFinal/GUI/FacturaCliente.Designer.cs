@@ -203,6 +203,7 @@
             this.Name = "FacturaCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Factura Cliente";
+            this.Load += new System.EventHandler(this.FacturaCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnion)).EndInit();
             this.groupBox1.ResumeLayout(false);
