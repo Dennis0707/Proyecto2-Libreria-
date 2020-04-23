@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUSINESS;
 
 namespace GUI
 {
     public partial class ModificarUsuario : Form
     {
+        NegClientes negc = new NegClientes();
         public ModificarUsuario()
         {
             InitializeComponent();
@@ -27,6 +29,11 @@ namespace GUI
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            negc.modificar(txtNombre.Text, txtApellidos.Text, txtTelefono.Text, txtDireccion.Text, txtCedula.Text);
         }
     }
 }

@@ -42,7 +42,7 @@ namespace GUI
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
-
+            neg.EnviarInfo(txtCedula.Text,txtNombre.Text,txtApellidos.Text,txtTelefono.Text,txtDireccion.Text,txtUsuario.Text,txtContraseña.Text,"user");
         }
     }
 }

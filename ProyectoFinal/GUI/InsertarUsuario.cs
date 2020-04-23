@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUSINESS;
 
 namespace GUI
 {
     public partial class InsertarUsuario : Form
     {
+        NegClientes neg = new NegClientes();
         public InsertarUsuario()
         {
             InitializeComponent();
@@ -58,5 +60,11 @@ namespace GUI
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            neg.EnviarInfo(txtCedula.Text, txtNombre.Text, txtApellidos.Text, txtTelefono.Text, txtDireccion.Text, txtUsuario.Text, txtConstraseña.Text, "user");
+        }
     }
 }
+

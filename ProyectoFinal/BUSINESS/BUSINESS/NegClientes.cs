@@ -44,6 +44,15 @@ namespace BUSINESS
             return usuario;
         }
 
+        public void modificar (string Cedula, string Nombre, string Apellidos, string Telefono, string Direccion)
+        {
+            clint.ActualizarCliente(  Nombre,  Apellidos,  Telefono,  Direccion, Cedula);
+        }
+
+        public void eliminar(string Cedula)
+        {
+            clint.Eliminar_Cliente(Cedula);
+        }
         /*public string EnviarAutoCmplt()
         {
             string ced;
