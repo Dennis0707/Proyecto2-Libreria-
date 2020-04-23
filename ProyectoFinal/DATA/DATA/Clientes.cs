@@ -11,7 +11,7 @@ namespace DATA
 {
     public class Clientes
     {
-        public string connecion = "Data Source=DESKTOP-1KQV3DB\\SQLEXPRESS;Initial Catalog=Biblioteca;Integrated Security=True";
+        public string connecion = "Data Source=LAPTOP-3SNBQ5QJ\\SQLEXPRESS;Initial Catalog=ProyectoFinal;Integrated Security=True";
 
 
         public void Insertar_Cliente(string Cedula, string Nombre, string Apellidos, string Telefono, string Direccion)
