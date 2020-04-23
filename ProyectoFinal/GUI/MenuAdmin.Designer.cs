@@ -49,7 +49,7 @@
             // 
             // panel5
             // 
-            this.panel5.Location = new System.Drawing.Point(258, 62);
+            this.panel5.Location = new System.Drawing.Point(230, 62);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(510, 361);
             this.panel5.TabIndex = 9;
@@ -129,6 +129,7 @@
             // btnLibreria
             // 
             this.btnLibreria.BackColor = System.Drawing.Color.Transparent;
+            this.btnLibreria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLibreria.FlatAppearance.BorderSize = 0;
             this.btnLibreria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLibreria.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -153,6 +154,7 @@
             // btnAccesorios
             // 
             this.btnAccesorios.BackColor = System.Drawing.Color.Transparent;
+            this.btnAccesorios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAccesorios.FlatAppearance.BorderSize = 0;
             this.btnAccesorios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccesorios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -170,6 +172,7 @@
             // btnLibros
             // 
             this.btnLibros.BackColor = System.Drawing.Color.Transparent;
+            this.btnLibros.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLibros.FlatAppearance.BorderSize = 0;
             this.btnLibros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLibros.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,6 +190,7 @@
             // btnUsuarios
             // 
             this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUsuarios.FlatAppearance.BorderSize = 0;
             this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
