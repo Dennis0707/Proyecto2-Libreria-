@@ -79,5 +79,12 @@ namespace GUI
             conexion.CerrarConexion();
 
         }
+
+        private void EliminarLibro_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'libro._Libro' Puede moverla o quitarla según sea necesario.
+            this.libroTableAdapter.Fill(this.libro._Libro);
+
+        }
     }
 }
