@@ -43,6 +43,8 @@ namespace GUI
 
         private void InsertarUsuario_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'bibliotecaDataSet.Clientes' Puede moverla o quitarla según sea necesario.
+            this.clientesTableAdapter.Fill(this.bibliotecaDataSet.Clientes);
 
         }
 

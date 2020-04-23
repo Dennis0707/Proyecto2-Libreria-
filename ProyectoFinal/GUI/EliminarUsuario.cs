@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUSINESS;
 
 namespace GUI
 {
     public partial class EliminarUsuario : Form
     {
+        NegClientes neg = new  NegClientes();
+
         public EliminarUsuario()
         {
             InitializeComponent();
@@ -47,6 +50,11 @@ namespace GUI
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnEliminar_Click_1(object sender, EventArgs e)
+        {
+            neg.eliminar(txtCedula.Text);
         }
     }
 }

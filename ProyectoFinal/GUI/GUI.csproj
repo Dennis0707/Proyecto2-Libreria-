@@ -53,6 +53,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Accesorio.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BibliotecaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BibliotecaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ConsultarAccesorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,6 +314,17 @@
     </None>
     <None Include="Accesorio.xss">
       <DependentUpon>Accesorio.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotecaDataSet.xsc">
+      <DependentUpon>BibliotecaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BibliotecaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BibliotecaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BibliotecaDataSet.xss">
+      <DependentUpon>BibliotecaDataSet.xsd</DependentUpon>
     </None>
     <None Include="Libreria.xsc">
       <DependentUpon>Libreria.xsd</DependentUpon>
