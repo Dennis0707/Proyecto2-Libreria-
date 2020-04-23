@@ -28,21 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EliminarAccesorio));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvAccesorios = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.accesorio = new GUI.Accesorio();
+            this.accesorioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.accesorioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.accesorioTableAdapter = new GUI.AccesorioTableAdapters.AccesorioTableAdapter();
+            this.idAccesorioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idLibreriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccesorios)).BeginInit();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.accesorio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accesorioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accesorioBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -59,10 +73,19 @@
             // 
             // dgvAccesorios
             // 
+            this.dgvAccesorios.AutoGenerateColumns = false;
             this.dgvAccesorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccesorios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idAccesorioDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.descripcionDataGridViewTextBoxColumn,
+            this.idLibreriaDataGridViewTextBoxColumn,
+            this.cantidadDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn});
+            this.dgvAccesorios.DataSource = this.accesorioBindingSource1;
             this.dgvAccesorios.Location = new System.Drawing.Point(14, 200);
             this.dgvAccesorios.Name = "dgvAccesorios";
-            this.dgvAccesorios.Size = new System.Drawing.Size(488, 131);
+            this.dgvAccesorios.Size = new System.Drawing.Size(643, 131);
             this.dgvAccesorios.TabIndex = 45;
             this.dgvAccesorios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccesorios_CellContentClick);
             // 
@@ -75,7 +98,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.Maroon;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(420, 73);
+            this.btnEliminar.Location = new System.Drawing.Point(484, 78);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(123, 73);
             this.btnEliminar.TabIndex = 44;
@@ -90,9 +113,22 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(549, 27);
+            this.panel1.Size = new System.Drawing.Size(693, 27);
             this.panel1.TabIndex = 43;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(651, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // groupBox1
             // 
@@ -136,24 +172,66 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Código";
             // 
-            // pictureBox2
+            // accesorio
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(523, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.accesorio.DataSetName = "Accesorio";
+            this.accesorio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // accesorioBindingSource
+            // 
+            this.accesorioBindingSource.DataSource = this.accesorio;
+            this.accesorioBindingSource.Position = 0;
+            // 
+            // accesorioBindingSource1
+            // 
+            this.accesorioBindingSource1.DataMember = "Accesorio";
+            this.accesorioBindingSource1.DataSource = this.accesorioBindingSource;
+            // 
+            // accesorioTableAdapter
+            // 
+            this.accesorioTableAdapter.ClearBeforeFill = true;
+            // 
+            // idAccesorioDataGridViewTextBoxColumn
+            // 
+            this.idAccesorioDataGridViewTextBoxColumn.DataPropertyName = "Id_Accesorio";
+            this.idAccesorioDataGridViewTextBoxColumn.HeaderText = "Id_Accesorio";
+            this.idAccesorioDataGridViewTextBoxColumn.Name = "idAccesorioDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre ";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre ";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            // 
+            // idLibreriaDataGridViewTextBoxColumn
+            // 
+            this.idLibreriaDataGridViewTextBoxColumn.DataPropertyName = "Id_Libreria";
+            this.idLibreriaDataGridViewTextBoxColumn.HeaderText = "Id_Libreria";
+            this.idLibreriaDataGridViewTextBoxColumn.Name = "idLibreriaDataGridViewTextBoxColumn";
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             // 
             // EliminarAccesorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 344);
+            this.ClientSize = new System.Drawing.Size(693, 383);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvAccesorios);
             this.Controls.Add(this.btnEliminar);
@@ -163,12 +241,16 @@
             this.Name = "EliminarAccesorio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar Accesorio";
+            this.Load += new System.EventHandler(this.EliminarAccesorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccesorios)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accesorio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accesorioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accesorioBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,5 +266,15 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.BindingSource accesorioBindingSource;
+        private Accesorio accesorio;
+        private System.Windows.Forms.BindingSource accesorioBindingSource1;
+        private AccesorioTableAdapters.AccesorioTableAdapter accesorioTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAccesorioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idLibreriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
     }
 }

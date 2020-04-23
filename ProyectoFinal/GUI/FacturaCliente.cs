@@ -26,5 +26,16 @@ namespace GUI
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MenuCliente back = new MenuCliente();
+            back.Show();
+            this.Visible = false;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+                    }
     }
 }

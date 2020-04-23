@@ -137,6 +137,16 @@
     <Compile Include="InsertarUsuario.Designer.cs">
       <DependentUpon>InsertarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Libreria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Libreria.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Libro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Libro.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MantenimientoAccesorios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +309,28 @@
     </None>
     <None Include="Accesorio.xss">
       <DependentUpon>Accesorio.xsd</DependentUpon>
+    </None>
+    <None Include="Libreria.xsc">
+      <DependentUpon>Libreria.xsd</DependentUpon>
+    </None>
+    <None Include="Libreria.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Libreria.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Libreria.xss">
+      <DependentUpon>Libreria.xsd</DependentUpon>
+    </None>
+    <None Include="Libro.xsc">
+      <DependentUpon>Libro.xsd</DependentUpon>
+    </None>
+    <None Include="Libro.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Libro.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Libro.xss">
+      <DependentUpon>Libro.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

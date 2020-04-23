@@ -62,5 +62,12 @@ namespace GUI
             conexion.CerrarConexion();
 
         }
+
+        private void ModificarAccesorio_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'accesorio._Accesorio' Puede moverla o quitarla según sea necesario.
+            this.accesorioTableAdapter.Fill(this.accesorio._Accesorio);
+
+        }
     }
 }

@@ -118,7 +118,7 @@
             this.groupBox1.Size = new System.Drawing.Size(328, 312);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Información del Cliente";
+            this.groupBox1.Text = "Información del Usuario";
             // 
             // txtUsuario
             // 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarAccesorio));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbCantidad = new System.Windows.Forms.NumericUpDown();
@@ -47,12 +48,23 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.accesorio = new GUI.Accesorio();
+            this.accesorioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.accesorioTableAdapter = new GUI.AccesorioTableAdapters.AccesorioTableAdapter();
+            this.idAccesorioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idLibreriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccesorios)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accesorio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accesorioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -200,10 +212,19 @@
             // 
             // dgvAccesorios
             // 
+            this.dgvAccesorios.AutoGenerateColumns = false;
             this.dgvAccesorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccesorios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idAccesorioDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.descripcionDataGridViewTextBoxColumn,
+            this.idLibreriaDataGridViewTextBoxColumn,
+            this.cantidadDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn});
+            this.dgvAccesorios.DataSource = this.accesorioBindingSource;
             this.dgvAccesorios.Location = new System.Drawing.Point(23, 329);
             this.dgvAccesorios.Name = "dgvAccesorios";
-            this.dgvAccesorios.Size = new System.Drawing.Size(510, 131);
+            this.dgvAccesorios.Size = new System.Drawing.Size(645, 131);
             this.dgvAccesorios.TabIndex = 34;
             // 
             // btnActualizar
@@ -215,7 +236,7 @@
             this.btnActualizar.ForeColor = System.Drawing.Color.Maroon;
             this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
             this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnActualizar.Location = new System.Drawing.Point(406, 113);
+            this.btnActualizar.Location = new System.Drawing.Point(484, 158);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(142, 73);
             this.btnActualizar.TabIndex = 33;
@@ -230,7 +251,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(555, 27);
+            this.panel1.Size = new System.Drawing.Size(698, 27);
             this.panel1.TabIndex = 32;
             // 
             // pictureBox2
@@ -238,7 +259,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(532, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(760, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -246,11 +267,61 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // accesorio
+            // 
+            this.accesorio.DataSetName = "Accesorio";
+            this.accesorio.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // accesorioBindingSource
+            // 
+            this.accesorioBindingSource.DataMember = "Accesorio";
+            this.accesorioBindingSource.DataSource = this.accesorio;
+            // 
+            // accesorioTableAdapter
+            // 
+            this.accesorioTableAdapter.ClearBeforeFill = true;
+            // 
+            // idAccesorioDataGridViewTextBoxColumn
+            // 
+            this.idAccesorioDataGridViewTextBoxColumn.DataPropertyName = "Id_Accesorio";
+            this.idAccesorioDataGridViewTextBoxColumn.HeaderText = "Id_Accesorio";
+            this.idAccesorioDataGridViewTextBoxColumn.Name = "idAccesorioDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre ";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre ";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            // 
+            // idLibreriaDataGridViewTextBoxColumn
+            // 
+            this.idLibreriaDataGridViewTextBoxColumn.DataPropertyName = "Id_Libreria";
+            this.idLibreriaDataGridViewTextBoxColumn.HeaderText = "Id_Libreria";
+            this.idLibreriaDataGridViewTextBoxColumn.Name = "idLibreriaDataGridViewTextBoxColumn";
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            // 
             // ModificarAccesorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 482);
+            this.ClientSize = new System.Drawing.Size(698, 482);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvAccesorios);
@@ -260,6 +331,7 @@
             this.Name = "ModificarAccesorio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Accesorio";
+            this.Load += new System.EventHandler(this.ModificarAccesorio_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).EndInit();
@@ -267,6 +339,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccesorios)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accesorio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accesorioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -291,5 +365,14 @@
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Accesorio accesorio;
+        private System.Windows.Forms.BindingSource accesorioBindingSource;
+        private AccesorioTableAdapters.AccesorioTableAdapter accesorioTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAccesorioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idLibreriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EliminarLibro));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvLibro = new System.Windows.Forms.DataGridView();
@@ -38,11 +39,22 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.libro = new GUI.Libro();
+            this.libroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.libroTableAdapter = new GUI.LibroTableAdapters.LibroTableAdapter();
+            this.idLibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idLibreriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibro)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.libro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -59,10 +71,19 @@
             // 
             // dgvLibro
             // 
+            this.dgvLibro.AutoGenerateColumns = false;
             this.dgvLibro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLibro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idLibroDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.autorDataGridViewTextBoxColumn,
+            this.idLibreriaDataGridViewTextBoxColumn,
+            this.cantidadDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn});
+            this.dgvLibro.DataSource = this.libroBindingSource;
             this.dgvLibro.Location = new System.Drawing.Point(11, 200);
             this.dgvLibro.Name = "dgvLibro";
-            this.dgvLibro.Size = new System.Drawing.Size(519, 131);
+            this.dgvLibro.Size = new System.Drawing.Size(643, 131);
             this.dgvLibro.TabIndex = 35;
             this.dgvLibro.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibro_CellContentClick);
             // 
@@ -73,7 +94,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(542, 27);
+            this.panel1.Size = new System.Drawing.Size(695, 27);
             this.panel1.TabIndex = 33;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -82,7 +103,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(519, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(672, 6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -141,7 +162,7 @@
             this.btnEliminar.ForeColor = System.Drawing.Color.Maroon;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(407, 78);
+            this.btnEliminar.Location = new System.Drawing.Point(484, 99);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(123, 73);
             this.btnEliminar.TabIndex = 45;
@@ -149,11 +170,61 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click_1);
             // 
+            // libro
+            // 
+            this.libro.DataSetName = "Libro";
+            this.libro.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // libroBindingSource
+            // 
+            this.libroBindingSource.DataMember = "Libro";
+            this.libroBindingSource.DataSource = this.libro;
+            // 
+            // libroTableAdapter
+            // 
+            this.libroTableAdapter.ClearBeforeFill = true;
+            // 
+            // idLibroDataGridViewTextBoxColumn
+            // 
+            this.idLibroDataGridViewTextBoxColumn.DataPropertyName = "Id_Libro";
+            this.idLibroDataGridViewTextBoxColumn.HeaderText = "Id_Libro";
+            this.idLibroDataGridViewTextBoxColumn.Name = "idLibroDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre ";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre ";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // autorDataGridViewTextBoxColumn
+            // 
+            this.autorDataGridViewTextBoxColumn.DataPropertyName = "Autor";
+            this.autorDataGridViewTextBoxColumn.HeaderText = "Autor";
+            this.autorDataGridViewTextBoxColumn.Name = "autorDataGridViewTextBoxColumn";
+            // 
+            // idLibreriaDataGridViewTextBoxColumn
+            // 
+            this.idLibreriaDataGridViewTextBoxColumn.DataPropertyName = "Id_Libreria";
+            this.idLibreriaDataGridViewTextBoxColumn.HeaderText = "Id_Libreria";
+            this.idLibreriaDataGridViewTextBoxColumn.Name = "idLibreriaDataGridViewTextBoxColumn";
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            // 
             // EliminarLibro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 346);
+            this.ClientSize = new System.Drawing.Size(695, 346);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvLibro);
@@ -163,12 +234,15 @@
             this.Name = "EliminarLibro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar Libro";
+            this.Load += new System.EventHandler(this.EliminarLibro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibro)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.libro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,5 +258,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Libro libro;
+        private System.Windows.Forms.BindingSource libroBindingSource;
+        private LibroTableAdapters.LibroTableAdapter libroTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idLibroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn autorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idLibreriaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
     }
 }
