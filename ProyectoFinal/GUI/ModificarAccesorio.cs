@@ -69,5 +69,10 @@ namespace GUI
             this.accesorioTableAdapter.Fill(this.accesorio._Accesorio);
 
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

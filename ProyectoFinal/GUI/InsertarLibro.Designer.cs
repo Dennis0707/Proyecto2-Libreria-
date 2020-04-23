@@ -32,6 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsertarLibro));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvLibros = new System.Windows.Forms.DataGridView();
+            this.idLibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.autorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idLibreriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.libroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.libro = new GUI.Libro();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -48,23 +56,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnInsertar = new System.Windows.Forms.Button();
-            this.libro = new GUI.Libro();
-            this.libroBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.libroTableAdapter = new GUI.LibroTableAdapters.LibroTableAdapter();
-            this.idLibroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.autorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idLibreriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libro)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -80,6 +80,7 @@
             // 
             // dgvLibros
             // 
+            this.dgvLibros.AllowUserToAddRows = false;
             this.dgvLibros.AutoGenerateColumns = false;
             this.dgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -92,9 +93,55 @@
             this.dgvLibros.DataSource = this.libroBindingSource;
             this.dgvLibros.Location = new System.Drawing.Point(29, 349);
             this.dgvLibros.Name = "dgvLibros";
-            this.dgvLibros.Size = new System.Drawing.Size(647, 131);
+            this.dgvLibros.Size = new System.Drawing.Size(643, 131);
             this.dgvLibros.TabIndex = 30;
             this.dgvLibros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibros_CellContentClick);
+            // 
+            // idLibroDataGridViewTextBoxColumn
+            // 
+            this.idLibroDataGridViewTextBoxColumn.DataPropertyName = "Id_Libro";
+            this.idLibroDataGridViewTextBoxColumn.HeaderText = "Id_Libro";
+            this.idLibroDataGridViewTextBoxColumn.Name = "idLibroDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre ";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre ";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // autorDataGridViewTextBoxColumn
+            // 
+            this.autorDataGridViewTextBoxColumn.DataPropertyName = "Autor";
+            this.autorDataGridViewTextBoxColumn.HeaderText = "Autor";
+            this.autorDataGridViewTextBoxColumn.Name = "autorDataGridViewTextBoxColumn";
+            // 
+            // idLibreriaDataGridViewTextBoxColumn
+            // 
+            this.idLibreriaDataGridViewTextBoxColumn.DataPropertyName = "Id_Libreria";
+            this.idLibreriaDataGridViewTextBoxColumn.HeaderText = "Id_Libreria";
+            this.idLibreriaDataGridViewTextBoxColumn.Name = "idLibreriaDataGridViewTextBoxColumn";
+            // 
+            // cantidadDataGridViewTextBoxColumn
+            // 
+            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
+            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            // 
+            // libroBindingSource
+            // 
+            this.libroBindingSource.DataMember = "Libro";
+            this.libroBindingSource.DataSource = this.libro;
+            // 
+            // libro
+            // 
+            this.libro.DataSetName = "Libro";
+            this.libro.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -109,10 +156,11 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(608, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(681, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 21);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -136,7 +184,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Maroon;
-            this.groupBox1.Location = new System.Drawing.Point(87, 47);
+            this.groupBox1.Location = new System.Drawing.Point(194, 47);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(328, 285);
             this.groupBox1.TabIndex = 27;
@@ -260,7 +308,7 @@
             this.btnInsertar.ForeColor = System.Drawing.Color.Maroon;
             this.btnInsertar.Image = ((System.Drawing.Image)(resources.GetObject("btnInsertar.Image")));
             this.btnInsertar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInsertar.Location = new System.Drawing.Point(518, 167);
+            this.btnInsertar.Location = new System.Drawing.Point(562, 167);
             this.btnInsertar.Name = "btnInsertar";
             this.btnInsertar.Size = new System.Drawing.Size(110, 73);
             this.btnInsertar.TabIndex = 32;
@@ -268,55 +316,9 @@
             this.btnInsertar.UseVisualStyleBackColor = true;
             this.btnInsertar.Click += new System.EventHandler(this.btnInsertar_Click_1);
             // 
-            // libro
-            // 
-            this.libro.DataSetName = "Libro";
-            this.libro.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // libroBindingSource
-            // 
-            this.libroBindingSource.DataMember = "Libro";
-            this.libroBindingSource.DataSource = this.libro;
-            // 
             // libroTableAdapter
             // 
             this.libroTableAdapter.ClearBeforeFill = true;
-            // 
-            // idLibroDataGridViewTextBoxColumn
-            // 
-            this.idLibroDataGridViewTextBoxColumn.DataPropertyName = "Id_Libro";
-            this.idLibroDataGridViewTextBoxColumn.HeaderText = "Id_Libro";
-            this.idLibroDataGridViewTextBoxColumn.Name = "idLibroDataGridViewTextBoxColumn";
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre ";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre ";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // autorDataGridViewTextBoxColumn
-            // 
-            this.autorDataGridViewTextBoxColumn.DataPropertyName = "Autor";
-            this.autorDataGridViewTextBoxColumn.HeaderText = "Autor";
-            this.autorDataGridViewTextBoxColumn.Name = "autorDataGridViewTextBoxColumn";
-            // 
-            // idLibreriaDataGridViewTextBoxColumn
-            // 
-            this.idLibreriaDataGridViewTextBoxColumn.DataPropertyName = "Id_Libreria";
-            this.idLibreriaDataGridViewTextBoxColumn.HeaderText = "Id_Libreria";
-            this.idLibreriaDataGridViewTextBoxColumn.Name = "idLibreriaDataGridViewTextBoxColumn";
-            // 
-            // cantidadDataGridViewTextBoxColumn
-            // 
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "Cantidad";
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
             // 
             // InsertarLibro
             // 
@@ -335,13 +337,13 @@
             this.Load += new System.EventHandler(this.InsertarLibro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libro)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbCantidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libroBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

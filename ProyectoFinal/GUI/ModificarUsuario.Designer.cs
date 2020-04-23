@@ -70,6 +70,7 @@
             // 
             // dgvUsuario
             // 
+            this.dgvUsuario.AllowUserToAddRows = false;
             this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuario.Location = new System.Drawing.Point(24, 390);
             this.dgvUsuario.Name = "dgvUsuario";
@@ -88,6 +89,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
