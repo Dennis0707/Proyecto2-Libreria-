@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUSINESS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,7 @@ namespace GUI
         public ModificarAccesorio()
         {
             InitializeComponent();
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -65,7 +67,10 @@ namespace GUI
 
         private void ModificarAccesorio_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'libreria._Libreria' Puede moverla o quitarla según sea necesario.
+            this.libreriaTableAdapter.Fill(this.libreria._Libreria);
             // TODO: esta línea de código carga datos en la tabla 'accesorio._Accesorio' Puede moverla o quitarla según sea necesario.
+
             this.accesorioTableAdapter.Fill(this.accesorio._Accesorio);
 
         }
@@ -73,6 +78,11 @@ namespace GUI
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
