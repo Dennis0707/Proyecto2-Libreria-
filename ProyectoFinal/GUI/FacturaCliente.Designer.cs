@@ -35,6 +35,7 @@
             this.dgvUnion = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnFacturar = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnion)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -97,7 +97,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1073, 27);
+            this.panel1.Size = new System.Drawing.Size(1095, 27);
             this.panel1.TabIndex = 54;
             // 
             // groupBox1
@@ -124,6 +124,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de la Compra";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(434, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(181, 16);
+            this.label6.TabIndex = 63;
+            this.label6.Text = "Información de accesorios";
             // 
             // label5
             // 
@@ -238,27 +247,18 @@
             this.btnFacturar.ForeColor = System.Drawing.Color.Maroon;
             this.btnFacturar.Image = ((System.Drawing.Image)(resources.GetObject("btnFacturar.Image")));
             this.btnFacturar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFacturar.Location = new System.Drawing.Point(751, 57);
+            this.btnFacturar.Location = new System.Drawing.Point(846, 71);
             this.btnFacturar.Name = "btnFacturar";
             this.btnFacturar.Size = new System.Drawing.Size(125, 62);
             this.btnFacturar.TabIndex = 61;
             this.btnFacturar.Text = "        Facturar";
             this.btnFacturar.UseVisualStyleBackColor = true;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(434, 34);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(181, 16);
-            this.label6.TabIndex = 63;
-            this.label6.Text = "Información de accesorios";
-            // 
             // FacturaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1073, 514);
+            this.ClientSize = new System.Drawing.Size(1095, 514);
             this.Controls.Add(this.btnFacturar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
